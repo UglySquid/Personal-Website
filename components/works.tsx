@@ -79,14 +79,14 @@ import {
             <Card
               heading={'Webdev'}
               icon={<Icon as={MdOutlineWebAsset} w={10} h={10} />}
-              description={'My webdev portfolio. It is soooo undresponsive, and only looks good on fairly wide screens, say minimum 1650x958(my screen size)'}
+              description={'My webdev portfolio. It is very unresponsive, and looks good on wide horizontal screens'}
               link={<Link href={'https://uglysquid.github.io/'} isExternal>Check it out</Link>}
             />
             <Card
               heading={'Graphics'}
               icon={<Icon as={FaFolder} w={10} h={10} />}
               description={
-                'Google Drive with my art'
+                'Google Drive with my art.'
               }
               link={<Link href={'https://drive.google.com/drive/folders/1LG_l5ZZzm3dc-UrBCX8tX5EJit5aSBp3?usp=sharing'} isExternal>Check it out</Link>}
             />
@@ -94,7 +94,7 @@ import {
               heading={'Other Dev'}
               icon={<Icon as={BsGithub} w={10} h={10} />}
               description={
-                'Github with my projects'
+                'Github with my projects. '
               }
               link={<Link href={'https://github.com/UglySquid'} isExternal>Check it out</Link>}
             />
