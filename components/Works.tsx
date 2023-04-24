@@ -70,7 +70,7 @@ import {
             / Works
           </Text>
           <Text color={'white.600'} fontSize={{ base: 'sm', sm: 'lg' }}>
-            These are some of the things I've made and some things I'm still working on.
+            These are some of the things I&apos;ve made and some things I&apos;m still working on.
           </Text>
         </Stack>
   

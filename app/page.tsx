@@ -11,11 +11,7 @@ import Works from '@/components/Works'
 import About from '@/components/About'
 import Nav from '@/components/Nav'
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export default function RootLayout() {
   return (
     <html lang="en">
       <body>
@@ -35,7 +31,6 @@ export default function RootLayout({
                 <Works />
             </Flex>
           </Flex>
-          {children}
         </ChakraProvider>
       </body>
     </html>

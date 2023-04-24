@@ -48,7 +48,7 @@ import {
               Hello There...
             </Text>
             <Text color={'white.500'} fontSize={'lg'}>
-            I’m Christine! I'm currently a grade 10 student at Milliken Mills High School. 
+            I&apos;m Christine! I&apos;m currently a grade 10 student at Milliken Mills High School. 
             In my freetime, I like to read and code.
             </Text>
             
