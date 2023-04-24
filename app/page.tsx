@@ -6,10 +6,10 @@ import {
   Skeleton,
 } from '@chakra-ui/react'
   
-import Hero from '@/components/Hero'
-import Works from '@/components/Works'
-import About from '@/components/About'
-import Nav from '@/components/Nav'
+import Hero from '@/components/hero'
+import Works from '@/components/works'
+import About from '@/components/about'
+import Nav from '@/components/nav'
 
 export default function RootLayout() {
   return (
