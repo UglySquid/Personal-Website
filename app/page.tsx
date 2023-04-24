@@ -4,6 +4,7 @@ import {
   Flex,
   ChakraProvider,
   Skeleton,
+  extendTheme,
 } from '@chakra-ui/react'
   
 import Hero from '@/components/hero'
@@ -11,11 +12,18 @@ import Works from '@/components/works'
 import About from '@/components/about'
 import Nav from '@/components/nav'
 
+const theme = extendTheme({
+  config: {
+    useSystemColorMode: false,
+    initialColorMode: "dark"
+  }
+});
+
 export default function RootLayout() {
   return (
     <html lang="en">
       <body>
-        <ChakraProvider>
+        <ChakraProvider theme={theme}>
           <Flex height="100%" alignItems="center" justifyContent="center">
             <Flex direction="column" background="grey.100" p={12} rounded={6} gap={100}>
                 <Nav />
