@@ -58,7 +58,7 @@ import {
               rounded={'md'}
               alt={'Currently Nonexistent image'}
               src={
-                'strawberry2.jpg'
+                'deca.jpg'
               }
               objectFit={'cover'}
               // fallbackSrc='https://via.placeholder.com/450x300'
