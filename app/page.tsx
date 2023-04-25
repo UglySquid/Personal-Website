@@ -23,6 +23,9 @@ const theme = extendTheme({
 export default function RootLayout() {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" type="image/x-icon" href="imsobbingnow.png"/>
+      </head>
       <body>
         <ChakraProvider theme={theme}>
           <Flex height="100%" alignItems="center" justifyContent="center">
