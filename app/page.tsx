@@ -24,6 +24,7 @@ export default function RootLayout() {
   return (
     <html lang="en">
       <head>
+        <title>Christine Wei</title>
         <link rel="icon" type="image/x-icon" href="imsobbingnow.png"/>
       </head>
       <body>
