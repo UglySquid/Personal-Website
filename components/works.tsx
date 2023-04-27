@@ -12,7 +12,7 @@ import {
   } from '@chakra-ui/react';
   import { ReactElement } from 'react';
 
-  import { useScroll, useTransform, isValidMotionProp, motion } from 'framer-motion';
+  import { useScroll, useTransform, isValidMotionProp, motion, Transition } from 'framer-motion';
   import React, { useRef, useEffect } from 'react';
   import { forwardRef, chakra, shouldForwardProp } from '@chakra-ui/react'
 

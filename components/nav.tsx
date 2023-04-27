@@ -19,7 +19,7 @@ import {
 } from '@chakra-ui/react';
 import { BsSun, BsMoonStarsFill } from 'react-icons/bs';
 
-import { useScroll, useTransform, isValidMotionProp, motion } from 'framer-motion';
+import { useScroll, useTransform, isValidMotionProp, motion, Transition } from 'framer-motion';
 import React, { useRef, useEffect } from 'react';
 import { forwardRef, chakra, shouldForwardProp } from '@chakra-ui/react'
 
@@ -60,12 +60,12 @@ export default function Nav() {
                     animate={{
                       rotate: [0, 0, 270, 270, 0],
                     }}
-                    transition={{
-                      duration: 5,
-                      ease: "easeInOut",
-                      repeat: Infinity,
-                      repeatType: "loop",
-                    }}
+                    // transition={{
+                    //   duration: 5,
+                    //   ease: "easeInOut",
+                    //   repeat: Infinity,
+                    //   repeatType: "loop",
+                    // }}
                   >
                     {colorMode === 'light' ? <BsMoonStarsFill /> : <BsSun />}
                   </ChakraBox>
