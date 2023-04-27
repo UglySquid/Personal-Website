@@ -12,6 +12,9 @@ import {
   } from '@chakra-ui/react';
   import { ReactElement } from 'react';
 
+  import { useScroll, useTransform, motion } from 'framer-motion';
+  import React, { useRef, useEffect } from 'react';
+
   import { BsGithub } from 'react-icons/bs'
   import { FaFolder } from 'react-icons/fa'
   import { MdOutlineWebAsset } from 'react-icons/md'
@@ -25,35 +28,35 @@ import {
   
   const Card = ({ heading, description, icon, link }: CardProps) => {
     return (
-      <Box
-        maxW={{ base: 'full', md: '275px' }}
-        w={'full'}
-        borderWidth="1px"
-        borderRadius="lg"
-        overflow="hidden"
-        p={5}>
-        <Stack align={'start'} spacing={2}>
-          <Flex
-            w={16}
-            h={16}
-            align={'center'}
-            justify={'center'}
-            color={'white'}
-            rounded={'full'}
-            bg={useColorModeValue('gray.100', 'gray.700')}>
-            {icon}
-          </Flex>
-          <Box mt={2}>
-            <Heading color={'yellow.100'} size="md">{heading}</Heading>
-            <Text mt={1} fontSize={'sm'}>
-              {description}
-            </Text>
-          </Box>
-          <Button variant={'link'} colorScheme={'blue'} size={'sm'}>
-              {link}
-          </Button>
-        </Stack>
-      </Box>
+        <Box
+          maxW={{ base: 'full', md: '275px' }}
+          w={'full'}
+          borderWidth="1px"
+          borderRadius="lg"
+          overflow="hidden"
+          p={5}>
+          <Stack align={'start'} spacing={2}>
+            <Flex
+              w={16}
+              h={16}
+              align={'center'}
+              justify={'center'}
+              color={'white'}
+              rounded={'full'}
+              bg={useColorModeValue('gray.100', 'gray.700')}>
+              {icon}
+            </Flex>
+            <Box mt={2}>
+              <Heading color={'yellow.100'} size="md">{heading}</Heading>
+              <Text mt={1} fontSize={'sm'}>
+                {description}
+              </Text>
+            </Box>
+            <Button variant={'link'} colorScheme={'blue'} size={'sm'}>
+                {link}
+            </Button>
+          </Stack>
+        </Box>
     );
   };
   
@@ -76,12 +79,19 @@ import {
   
         <Container maxW={'5xl'} mt={12}>
           <Flex flexWrap="wrap" gridGap={6} justify="center">
-            <Card
-              heading={'Webdev'}
-              icon={<Icon as={MdOutlineWebAsset} w={10} h={10} />}
-              description={'My webdev portfolio. It is very unresponsive, and looks good on wide horizontal screens'}
-              link={<Link href={'https://uglysquid.github.io/'} isExternal>Check it out</Link>}
-            />
+            <motion.section
+              initial={{ opacity: 0, scale: 0.5, rotateX: -10 }}
+              whileInView={{ opacity: 1, scale: 1, rotateX: 0 }}
+              transition={{ type: "spring", stiffness: 100, duration: 2 }}
+            >
+              <Card
+                heading={'Webdev'}
+                icon={<Icon as={MdOutlineWebAsset} w={10} h={10} />}
+                description={'My webdev portfolio. It is very unresponsive, and looks good on wide horizontal screens'}
+                link={<Link href={'https://uglysquid.github.io/'} isExternal>Check it out</Link>}
+              />
+            </motion.section>
+
             <Card
               heading={'Graphics'}
               icon={<Icon as={FaFolder} w={10} h={10} />}
