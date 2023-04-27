@@ -58,7 +58,7 @@ import {
           whileInView={{ opacity: 1, rotateX: 0, scale: 1 }}
           transition={{type:"spring", stiffness: 50, duration: 1 }}
 
-          whileHover={{ scale: 1.1 }}
+          whileHover={{ scale: 1.2 }}
           onHoverStart={e => {}}
           onHoverEnd={e => {}}
 
