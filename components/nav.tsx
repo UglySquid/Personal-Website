@@ -15,8 +15,20 @@ import {
   Stack,
   useColorMode,
   Center,
+  AspectRatio
 } from '@chakra-ui/react';
 import { BsSun, BsMoonStarsFill } from 'react-icons/bs';
+
+import { useScroll, useTransform, isValidMotionProp, motion } from 'framer-motion';
+import React, { useRef, useEffect } from 'react';
+import { forwardRef, chakra, shouldForwardProp } from '@chakra-ui/react'
+
+const ChakraBox = chakra(motion.div, {
+  /**
+   * Allow motion props and non-Chakra props to be forwarded.
+   */
+  shouldForwardProp: (prop) => isValidMotionProp(prop) || shouldForwardProp(prop),
+});
 
 const NavLink = ({ children }: { children: ReactNode }) => (
   <Link
@@ -43,9 +55,21 @@ export default function Nav() {
 
           <Flex alignItems={'center'}>
             <Stack direction={'row'} spacing={7}>
-              <Button onClick={toggleColorMode}>
-                {colorMode === 'light' ? <BsMoonStarsFill /> : <BsSun />}
-              </Button>
+                <Button onClick={toggleColorMode}>
+                  <ChakraBox
+                    animate={{
+                      rotate: [0, 0, 270, 270, 0],
+                    }}
+                    transition={{
+                      duration: 5,
+                      ease: "easeInOut",
+                      repeat: Infinity,
+                      repeatType: "loop",
+                    }}
+                  >
+                    {colorMode === 'light' ? <BsMoonStarsFill /> : <BsSun />}
+                  </ChakraBox>
+                </Button>                
             </Stack>
           </Flex>
         </Flex>

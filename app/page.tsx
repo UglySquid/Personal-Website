@@ -24,37 +24,6 @@ const theme = extendTheme({
   }
 });
 
-// const container = {
-//   show: {
-//     transition: {
-//       staggerChildren: 0.35,
-//     }
-//   }
-// }
-
-// const item = {
-//   hidden: {
-//     opacity: 0,
-//     y: 200,
-//   },
-//   show: {
-//     opacity: 1,
-//     y: 0, 
-//     transition: {
-//       ease: [0.6, 0.1, -0.5, 0.95]
-//     }
-//   }
-// }
-
-// const Loader = ({ setLoading }) => {
-//   useEffect(() => {
-//     const timer = setTimeout(() => {
-//       setLoading(false);
-//     }, 4000);
-//     return () => clearTimeout(timer);
-//   })
-// }
-
 export default function RootLayout() {
   return (
     
@@ -68,7 +37,15 @@ export default function RootLayout() {
           <Flex className='loader' height="100%" alignItems="center" justifyContent="center">
             <Flex direction="column" background="grey.100" p={12} rounded={6} gap={200}>
 
-                <Nav />
+                <motion.section
+                  initial={{ scaleX: 0, y: 200 }}
+                  whileInView={{ scaleX: 1, y: 0  }}
+                  transition={{ type: "spring", stiffness: 100, duration: 2 }}
+                  viewport={{ once: true }}
+                >
+                  <Nav />
+                </motion.section>
+                
 
                 <motion.section
                   initial={{ opacity: 0, scale: 0.5, y: -100 }}
@@ -78,7 +55,14 @@ export default function RootLayout() {
                 </motion.section>
                 
 
-                <Skeleton startColor='blue.200' endColor='yellow.50' height='10px' />
+                <motion.section
+                  initial={{ scaleX: 0, y: 200 }}
+                  whileInView={{ scaleX: 1, y: 0  }}
+                  transition={{ type: "spring", stiffness: 100, duration: 2 }}
+                  viewport={{ once: true }}
+                >
+                  <Skeleton startColor='yellow.600' endColor='blue.200' height='10px' />
+                </motion.section>
                 
                 <motion.section
                   initial={{ opacity: 0, y: 200 }}
@@ -88,7 +72,16 @@ export default function RootLayout() {
                   <About />
                 </motion.section>
 
-                <Skeleton startColor='blue.200' endColor='yellow.50' height='10px' />
+                <motion.section
+                  initial={{ scaleX: 0, y: 200 }}
+                  whileInView={{ scaleX: 1, y: 0  }}
+                  transition={{ type: "spring", stiffness: 100, duration: 2 }}
+                  viewport={{ once: true }}
+                >
+                  <Skeleton startColor='yellow.600' endColor='blue.200' height='10px' />
+                </motion.section>
+
+                
 
                 <motion.section
                   initial={{ opacity: 0, y: 200 }}
