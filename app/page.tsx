@@ -96,14 +96,7 @@ export default function RootLayout() {
                   <Works />
                 </motion.section>
                 
-                <motion.section
-                  initial={{ scaleX: 0, y: 200 }}
-                  whileInView={{ scaleX: 1, y: 0  }}
-                  transition={{ type: "spring", stiffness: 100, duration: 2 }}
-                  viewport={{ once: true }}
-                >
-                  <Footer />
-                </motion.section>
+                <Footer />
                 
               {/* </motion.div> */}
             </Flex>
