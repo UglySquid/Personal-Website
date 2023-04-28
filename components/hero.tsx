@@ -3,19 +3,27 @@ import {
     SimpleGrid,
     Img,
     Flex,
-    Heading,
     Text,
     Stack,
-    useColorModeValue,
+    extendTheme,
+    ChakraProvider
   } from '@chakra-ui/react';
 
   import { ReactElement } from 'react';
+
+  import '@fontsource/roboto-mono/500.css'
   
   interface FeatureProps {
     text: string;
     iconBg: string;
     icon?: ReactElement;
   }
+  
+  const theme = extendTheme({
+    fonts: {
+      Text: `'Roboto Mono', 'monospace'`,
+    },
+  })
   
   const Feature = ({ text, icon, iconBg }: FeatureProps) => {
     return (
@@ -42,10 +50,13 @@ import {
             <Text
               bgGradient='linear(to-r, blue.200, yellow.200, pink.200)'
               bgClip='text'
-              fontSize='6xl'
+              fontSize='7xl'
               fontWeight='extrabold'
             >
-              Hello There...
+              <ChakraProvider theme={theme}>
+                Hello There...
+              </ChakraProvider>
+              
             </Text>
             <Text color={'white.500'} fontSize={'lg'}>
             I&apos;m Christine! I&apos;m currently a grade 10 student at Milliken Mills High School. 

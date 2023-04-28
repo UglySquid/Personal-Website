@@ -53,7 +53,7 @@ import { AiOutlineInstagram, AiOutlineMail, AiOutlineLinkedin } from 'react-icon
               <Text
                 bgGradient='linear(to-r, blue.200, yellow.200, pink.200)'
                 bgClip='text'
-                fontSize='4xl'
+                fontSize='6xl'
                 fontWeight='extrabold'
               >
                 / About me
@@ -101,7 +101,7 @@ import { AiOutlineInstagram, AiOutlineMail, AiOutlineLinkedin } from 'react-icon
             
           <Feature
             heading={'Spirit of Math'}
-            text ={'As Teaching Assistant at Spirit of Math, I teach advanced maths to students ages 7 and 8.'}
+            text ={'As Teaching Assistant at Spirit of Math, I teach advanced maths to students ages 7 and 8. This experience taught me communication and patience.'}
           />
           <Feature
             heading={'MMHS Robotics'}
@@ -113,7 +113,7 @@ import { AiOutlineInstagram, AiOutlineMail, AiOutlineLinkedin } from 'react-icon
           />
           <Feature
             heading={"Ignition Hacks"}
-            text={'I work with other UI/UX executives at Ignition Hacks to design the sponsorhsip package and various other things.'}
+            text={'I work with other UI/UX executives at Ignition Hacks to design the sponsorhsip package and various other things. This experience taught me teamwork.'}
           />
         </Grid>
       </Box>

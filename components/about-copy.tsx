@@ -1,15 +1,16 @@
 import {
     chakra,
-    VStack, Flex, 
+    VStack, HStack, Flex, 
     Button, Divider,
     Grid, GridItem, Container, Box,
-    Text,
+    Text, Link,
     Menu, MenuButton, MenuList, MenuItem,
     Tabs, TabList, TabPanels, Tab, TabPanel
   } from '@chakra-ui/react';
 
 import { BsChevronDown } from 'react-icons/bs'
-import { AiOutlineInstagram, AiOutlineMail, AiOutlineLinkedin } from 'react-icons/ai'
+import { AiFillInstagram, AiFillLinkedin } from 'react-icons/ai'
+import { EmailIcon } from '@chakra-ui/icons'
   
   interface FeatureProps {
     heading: string;
@@ -19,10 +20,10 @@ import { AiOutlineInstagram, AiOutlineMail, AiOutlineLinkedin } from 'react-icon
   const Feature = ({ heading, text }: FeatureProps) => {
     return (
       <GridItem>
-        <chakra.h3 fontSize="xl" fontWeight="600" color={'yellow.100'}>
+        <chakra.h3 fontSize="3xl" fontWeight="600" color={'yellow.100'}>
           {heading}
         </chakra.h3>
-        <chakra.p>{text}</chakra.p>
+        <chakra.p fontSize="xl">{text}</chakra.p>
       </GridItem>
     );
   };
@@ -46,42 +47,43 @@ import { AiOutlineInstagram, AiOutlineMail, AiOutlineLinkedin } from 'react-icon
               <Text
                 bgGradient='linear(to-r, blue.200, yellow.200, pink.200)'
                 bgClip='text'
-                fontSize='4xl'
+                fontSize='5xl'
                 fontWeight='extrabold'
               >
-                / About me
+                / About me (Resume basically)
               </Text>
 
-              <Menu>
+              {/* <Menu>
                 <MenuButton as={Button} rightIcon={< BsChevronDown />}>
                   Contact Me
                 </MenuButton>
                 <MenuList>
-                  <MenuItem icon={<AiOutlineMail />} as="a" href='mailto:christine.wei.63@gmail.com'>
+                  <MenuItem icon={<EmailIcon />} as="a" href='mailto:christine.wei.63@gmail.com'>
                     Email me
                   </MenuItem>
 
-                  <MenuItem icon={<AiOutlineInstagram />} as="a" href='https://www.instagram.com/wo_ochy/'>
+                  <MenuItem icon={<AiFillInstagram />} as="a" href='https://www.instagram.com/wo_ochy/'>
                     Instagram
                   </MenuItem>
                   
-                  <MenuItem icon={<AiOutlineLinkedin />} as="a" href='https://www.linkedin.com/in/christine-wei-is-awesome/'>
+                  <MenuItem icon={<AiFillLinkedin />} as="a" href='https://www.linkedin.com/in/christine-wei-is-awesome/'>
                     LinkedIn
                   </MenuItem>
                 </MenuList>
-              </Menu>
+              </Menu> */}
 
-              <Flex>
-                <chakra.p>
+              
+
+              {/* <Flex>
+                <chakra.p fontSize="xl">
                 I&apos;m currently the secretary for MMHS Robotics, 
                 the animator for PERIOD. Ontario, and a content exectutive at MMHS MathSoc. 
                 I also work as a Teaching Assistant at Spirit of Math. 
                 </chakra.p>
-            </Flex>
+            </Flex> */}
 
             </VStack>
 
-            <Divider mt={12} mb={12} />
           </GridItem>
           
           <GridItem>
@@ -96,7 +98,7 @@ import { AiOutlineInstagram, AiOutlineMail, AiOutlineLinkedin } from 'react-icon
                 <TabPanel border='1px' borderColor='gray.700'>
                   <Feature 
                     heading={'Spirit of Math'}
-                    text ={'As Teaching Assistant at Spirit of Math, I teach advanced maths to students ages 7 and 8.'}
+                    text ={'As Teaching Assistant at Spirit of Math, I teach advanced maths to students ages 7 and 8. This experience taught me communication and patience.'}
                   />
                 </TabPanel>
                 <TabPanel border='1px' borderColor='gray.700'>
@@ -114,11 +116,38 @@ import { AiOutlineInstagram, AiOutlineMail, AiOutlineLinkedin } from 'react-icon
                 <TabPanel border='1px' borderColor='gray.700'>
                   <Feature
                     heading={"Ignition Hacks"}
-                    text={'I work with other UI/UX executives at Ignition Hacks to design the sponsorhsip package and various other things.'}
+                    text={'I work with other UI/UX executives at Ignition Hacks to design the sponsorhsip package and various other things. This experience taught me teamwork.'}
                   />
                 </TabPanel>
               </TabPanels>
             </Tabs>
+
+            {/* <Divider mt={12} mb={12} />
+
+            <HStack spacing={4}>
+              <Text
+                bgGradient='linear(to-r, blue.200, yellow.200, pink.200)'
+                bgClip='text'
+                fontSize='5xl'
+                fontWeight='extrabold'
+              >
+                / Contact me: 
+              </Text>
+
+              <Button leftIcon={<EmailIcon />} colorScheme='gray' variant='solid'>
+                Email
+              </Button>
+              <Button rightIcon={<AiFillInstagram />} colorScheme='gray' variant='outline' >
+                <Link href='https://www.instagram.com/wo_ochy/' isExternal>
+                  Instagram
+                </Link>
+              </Button>
+              <Button rightIcon={<AiFillLinkedin />} colorScheme='gray' variant='outline' >
+                <Link href='https://www.linkedin.com/in/christine-wei-is-awesome/' isExternal>
+                LinkedIn
+                </Link>
+              </Button>
+            </HStack> */}
           </GridItem>
         </Grid>
       </Box>
