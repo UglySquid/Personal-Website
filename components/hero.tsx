@@ -3,7 +3,7 @@ import {
     SimpleGrid,
     Img,
     Flex,
-    Text,
+    Text, Heading,
     Stack,
     extendTheme,
     ChakraProvider
@@ -11,7 +11,7 @@ import {
 
   import { ReactElement } from 'react';
 
-  import '@fontsource/roboto-mono/500.css'
+  import "@fontsource/roboto-mono"
   
   interface FeatureProps {
     text: string;
@@ -19,9 +19,9 @@ import {
     icon?: ReactElement;
   }
   
-  const theme = extendTheme({
+  const Font = extendTheme({
     fonts: {
-      Text: `'Roboto Mono', 'monospace'`,
+      Heading: `'Roboto Mono', monospace;`,
     },
   })
   
@@ -47,20 +47,20 @@ import {
       <Container maxW={'5xl'} py={12}>
         <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
           <Stack spacing={4}>
-            <Text
-              bgGradient='linear(to-r, blue.200, yellow.200, pink.200)'
-              bgClip='text'
-              fontSize='7xl'
-              fontWeight='extrabold'
-            >
-              <ChakraProvider theme={theme}>
+            <ChakraProvider theme={Font}>
+              <Heading
+                bgGradient='linear(to-r, blue.200, yellow.200, pink.200)'
+                bgClip='text'
+                fontSize='7xl'
+                fontWeight='extrabold'
+              >
                 Hello There...
-              </ChakraProvider>
-              
-            </Text>
+                
+              </Heading>
+            </ChakraProvider>
             <Text color={'white.500'} fontSize={'lg'}>
             I&apos;m Christine! I&apos;m currently a grade 10 student at Milliken Mills High School. 
-            In my freetime, I like to read and code.
+            In my freetime, I like to read and code. I dunno man I&apos;m kinda basic 😳
             </Text>
             
           </Stack>

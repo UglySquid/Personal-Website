@@ -56,7 +56,7 @@ import {
           variants={item}
           initial={{ opacity: 0, rotateX: -10, scale: 0 }}
           whileInView={{ opacity: 1, rotateX: 0, scale: 1 }}
-          // transition={{type:"spring", stiffness: 50, duration: 1 }}
+          viewport={{ once: true }}
 
           whileHover={{ scale: 1.1 }}
           onHoverStart={e => {}}
@@ -101,7 +101,7 @@ import {
           <Text
             bgGradient='linear(to-r, blue.200, yellow.200, pink.200)'
             bgClip='text'
-            fontSize='4xl'
+            fontSize='5xl'
             fontWeight='extrabold'
           >
             / Works
