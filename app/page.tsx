@@ -39,8 +39,8 @@ export default function RootLayout() {
             <Flex direction="column" background="grey.100" p={12} rounded={6} gap={100}>
 
                 <motion.section
-                  initial={{ scaleX: 0, y: 200 }}
-                  whileInView={{ scaleX: 1, y: 0  }}
+                  initial={{ scaleX: 0 }}
+                  whileInView={{ scaleX: 1 }}
                   transition={{ type: "spring", stiffness: 100, duration: 2 }}
                   viewport={{ once: true }}
                 >
@@ -57,8 +57,8 @@ export default function RootLayout() {
                 </motion.section>
 
                 <motion.section
-                  initial={{ scaleX: 0, y: 200 }}
-                  whileInView={{ scaleX: 1, y: 0  }}
+                  initial={{ scaleX: 0 }}
+                  whileInView={{ scaleX: 1 }}
                   transition={{ type: "spring", stiffness: 100, duration: 2 }}
                   viewport={{ once: true }}
                 >
@@ -77,8 +77,8 @@ export default function RootLayout() {
                 
 
                 <motion.section
-                  initial={{ scaleX: 0, y: 200 }}
-                  whileInView={{ scaleX: 1, y: 0  }}
+                  initial={{ scaleX: 0 }}
+                  whileInView={{ scaleX: 1  }}
                   transition={{ type: "spring", stiffness: 100, duration: 2 }}
                   viewport={{ once: true }}
                 >
@@ -96,7 +96,15 @@ export default function RootLayout() {
                   <Works />
                 </motion.section>
                 
-                <Footer />
+                <motion.section
+                  initial={{ scaleX: 0 }}
+                  whileInView={{ scaleX: 1  }}
+                  transition={{ type: "spring", stiffness: 100, duration: 2 }}
+                  viewport={{ once: true }}
+                >
+                  <Footer />
+                </motion.section>
+                
                 
               {/* </motion.div> */}
             </Flex>

@@ -2,11 +2,13 @@ import {
     Container,
     SimpleGrid,
     Img,
+    Skeleton,
     Flex,
     Text, Heading,
     Stack,
     extendTheme,
-    ChakraProvider
+    ChakraProvider,
+    Center
   } from '@chakra-ui/react';
 
   import { ReactElement } from 'react';
@@ -45,7 +47,7 @@ import {
   export default function Hero() {
     return (
       <Container maxW={'5xl'} py={12}>
-        <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
+        <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10} alignItems={'center'}>
           <Stack spacing={4}>
             <ChakraProvider theme={Font}>
               <Heading
@@ -64,16 +66,20 @@ import {
             </Text>
             
           </Stack>
-          <Flex>
-            <Img
-              rounded={'md'}
-              alt={'Currently Nonexistent image'}
-              src={
-                'deca.jpg'
-              }
-              objectFit={'cover'}
-              // fallbackSrc='https://via.placeholder.com/450x300'
-            />
+          <Flex justifyContent='right'>
+            <Skeleton isLoaded>
+              <Img
+                rounded={'md'}
+                alt={'Currently Nonexistent image'}
+                src={
+                  'deca.jpg'
+                }
+                objectFit={'cover'}
+                height={250}
+                // fallbackSrc='https://via.placeholder.com/450x300'
+              />
+            </Skeleton>
+            
           </Flex>
         </SimpleGrid>
       </Container>
