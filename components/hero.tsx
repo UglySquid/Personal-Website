@@ -46,7 +46,7 @@ import {
   
   export default function Hero() {
     return (
-      <Container maxW={'5xl'} py={12}>
+      <Container maxW={'5xl'} py={12} centerContent>
         <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10} alignItems={'center'}>
           <Stack spacing={4}>
             <ChakraProvider theme={Font}>
@@ -66,7 +66,7 @@ import {
             </Text>
             
           </Stack>
-          <Flex justifyContent='right'>
+          <Flex justifyContent={'center'}>
             <Skeleton isLoaded>
               <Img
                 rounded={'md'}
