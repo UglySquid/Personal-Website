@@ -1,32 +1,29 @@
 import {
-    Container,
-    SimpleGrid,
-    Img,
-    Skeleton,
-    Flex,
+    Container, SimpleGrid, Flex, Stack,
+    Img, Skeleton,
     Text, Heading,
-    Stack,
-    extendTheme,
-    ChakraProvider,
-    Center
+    extendTheme, ChakraProvider, chakra,
+    shouldForwardProp,
   } from '@chakra-ui/react';
 
-  import { ReactElement } from 'react';
+  import React, { ReactElement, useEffect, useRef, useState } from 'react';
 
-  import "@fontsource/roboto-mono"
+  import "@fontsource/roboto-mono/500.css"
   
   interface FeatureProps {
     text: string;
     iconBg: string;
     icon?: ReactElement;
   }
-  
+
   const Font = extendTheme({
     fonts: {
       Heading: `'Roboto Mono', monospace;`,
     },
   })
-  
+
+
+
   const Feature = ({ text, icon, iconBg }: FeatureProps) => {
     return (
       <Stack direction={'row'} align={'center'}>
@@ -67,7 +64,7 @@ import {
             
           </Stack>
           <Flex justifyContent={'center'}>
-            <Skeleton isLoaded>
+            {/* <Skeleton isLoaded>
               <Img
                 rounded={'md'}
                 alt={'Currently Nonexistent image'}
@@ -78,8 +75,12 @@ import {
                 height={250}
                 // fallbackSrc='https://via.placeholder.com/450x300'
               />
-            </Skeleton>
+            </Skeleton> */}
+            {/* <canvas class="webgl">
+              <script type='module' src='/cat.js'></script>
+            </canvas> */}
             
+            {/* 3D Model credit: "ordak the duck" (https://skfb.ly/oEn8s) by ZIRODESIGN is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/). */}
           </Flex>
         </SimpleGrid>
       </Container>

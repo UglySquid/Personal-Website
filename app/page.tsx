@@ -2,13 +2,13 @@
 
 import {
   Flex,
-  ChakraProvider,
+  ChakraProvider, chakra, shouldForwardProp, forwardRef,
   Skeleton,
   extendTheme,
 } from '@chakra-ui/react'
 
 
-import { useScroll, useTransform, motion } from 'framer-motion';
+import { isValidMotionProp, motion } from 'framer-motion';
 import React, { useRef, useEffect } from 'react';
   
 import Hero from '@/components/hero'
@@ -25,6 +25,15 @@ const theme = extendTheme({
   }
 });
 
+const ChakraBox = chakra(motion.div, {
+  /**
+   * Allow motion props and non-Chakra props to be forwarded.
+   */
+  shouldForwardProp: (prop) => isValidMotionProp(prop) || shouldForwardProp(prop),
+});
+
+const MotionBox = motion(forwardRef(({ layoutId, ...rest }, ref) => <chakra.div ref={ref} {...rest} />))
+
 export default function RootLayout() {
   return (
     
@@ -38,72 +47,72 @@ export default function RootLayout() {
           <Flex className='loader' height="100%" alignItems="center" justifyContent="center">
             <Flex direction="column" background="grey.100" p={12} rounded={6} gap={100}>
 
-                <motion.section
+                <MotionBox
                   initial={{ scaleX: 0 }}
                   whileInView={{ scaleX: 1 }}
                   transition={{ type: "spring", stiffness: 100, duration: 2 }}
                   viewport={{ once: true }}
                 >
                   <Nav />
-                </motion.section>
+                </MotionBox>
                 
 
-                <motion.section
+                <MotionBox
                   initial={{ opacity: 0, scale: 0.5, y: -100 }}
                   whileInView={{ opacity: 1, scale: 1, y: 0  }}
                   viewport={{ once: true }}
                 >
                   <Hero />
-                </motion.section>
+                </MotionBox>
 
-                <motion.section
+                <MotionBox shouldWrapChildren
                   initial={{ scaleX: 0 }}
                   whileInView={{ scaleX: 1 }}
                   transition={{ type: "spring", stiffness: 100, duration: 2 }}
                   viewport={{ once: true }}
                 >
                   <Skeleton startColor='yellow.600' endColor='blue.200' height='10px' />
-                </motion.section>
+                </MotionBox>
                 
-                <motion.section
+                <MotionBox shouldWrapChildren
                   initial={{ opacity: 0, y: 200 }}
                   whileInView={{ opacity: 1, y: 0  }}
                   transition={{ type: "spring", stiffness: 100, duration: 2 }}
                   viewport={{ once: true }}
                 >
                   <About />
-                </motion.section>
+                </MotionBox>
 
                 
 
-                <motion.section
+                <MotionBox
                   initial={{ scaleX: 0 }}
                   whileInView={{ scaleX: 1  }}
                   transition={{ type: "spring", stiffness: 100, duration: 2 }}
                   viewport={{ once: true }}
                 >
                   <Skeleton startColor='yellow.600' endColor='blue.200' height='10px' />
-                </motion.section>
+                </MotionBox>
 
                 
 
-                <motion.section
+                <MotionBox
                   initial={{ opacity: 0, y: 200 }}
                   whileInView={{ opacity: 1, y: 0  }}
                   transition={{ type: "spring", stiffness: 100, duration: 2 }}
                   viewport={{ once: true }}
                 >
                   <Works />
-                </motion.section>
+                </MotionBox>
                 
-                <motion.section
+                <MotionBox
                   initial={{ scaleX: 0 }}
                   whileInView={{ scaleX: 1  }}
                   transition={{ type: "spring", stiffness: 100, duration: 2 }}
                   viewport={{ once: true }}
                 >
                   <Footer />
-                </motion.section>
+                </MotionBox>
                 
                 
               {/* </motion.div> */}

@@ -1,9 +1,0 @@
-import { extendTheme } from '@chakra-ui/react'
-
-const theme = extendTheme({
-    fonts: {
-      Text: 'Roboto Mono', 'monospace';
-    },
-  })
-
-export default theme

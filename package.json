@@ -16,6 +16,7 @@
     "@fontsource/open-sans": "^4.5.14",
     "@fontsource/raleway": "^4.5.12",
     "@fontsource/roboto-mono": "^4.5.10",
+    "@splinetool/runtime": "^0.9.314",
     "@types/node": "18.16.0",
     "@types/react": "18.0.38",
     "@types/react-dom": "18.0.11",
