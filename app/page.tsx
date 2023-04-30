@@ -14,7 +14,6 @@ import React, { useRef, useEffect } from 'react';
 import Hero from '@/components/hero'
 import Works from '@/components/works'
 import About from '@/components/about'
-import AboutCopy from '@/components/about-copy';
 import Nav from '@/components/nav'
 import Footer from '@/components/footer'
 

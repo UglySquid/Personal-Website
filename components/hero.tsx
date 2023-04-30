@@ -64,7 +64,7 @@ import {
             
           </Stack>
           <Flex justifyContent={'center'}>
-            {/* <Skeleton isLoaded>
+            <Skeleton isLoaded>
               <Img
                 rounded={'md'}
                 alt={'Currently Nonexistent image'}
@@ -75,11 +75,11 @@ import {
                 height={250}
                 // fallbackSrc='https://via.placeholder.com/450x300'
               />
-            </Skeleton> */}
+            </Skeleton>
+
             {/* <canvas class="webgl">
               <script type='module' src='/cat.js'></script>
             </canvas> */}
-            
             {/* 3D Model credit: "ordak the duck" (https://skfb.ly/oEn8s) by ZIRODESIGN is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/). */}
           </Flex>
         </SimpleGrid>
