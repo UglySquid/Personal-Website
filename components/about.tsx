@@ -114,7 +114,7 @@ import {
           <Skeleton isLoaded>
             <Feature
               heading={"Ignition Hacks"}
-              text={'I work with other UI/UX executives at Ignition Hacks to design the sponsorhsip package and various other things. This experience taught me teamwork.'}
+              text={'I work with other UI/UX executives at Ignition Hacks to design the sponsorship package and various other things. This experience taught me teamwork.'}
             />            
           </Skeleton>
 
