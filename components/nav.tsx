@@ -2,33 +2,21 @@ import { ReactNode } from 'react';
 import {
   Box,
   Flex,
-  Avatar,
   Link,
   Button,
-  Menu,
-  MenuButton,
-  MenuList,
-  MenuItem,
-  MenuDivider,
   useDisclosure,
   useColorModeValue,
   Stack,
   useColorMode,
-  Center,
-  AspectRatio
+  forwardRef
 } from '@chakra-ui/react';
 import { BsSun, BsMoonStarsFill } from 'react-icons/bs';
 
-import { useScroll, useTransform, isValidMotionProp, motion, Transition } from 'framer-motion';
-import React, { useRef, useEffect } from 'react';
-import { forwardRef, chakra, shouldForwardProp } from '@chakra-ui/react'
+import { isValidMotionProp, motion, Transition } from 'framer-motion';
+import React, { } from 'react';
+import { chakra, shouldForwardProp } from '@chakra-ui/react'
 
-const ChakraBox = chakra(motion.div, {
-  /**
-   * Allow motion props and non-Chakra props to be forwarded.
-   */
-  shouldForwardProp: (prop) => isValidMotionProp(prop) || shouldForwardProp(prop),
-});
+const MotionBox = motion(forwardRef(({ layoutId, ...rest }, ref) => <chakra.div ref={ref} {...rest} />))
 
 const NavLink = ({ children }: { children: ReactNode }) => (
   <Link
@@ -56,19 +44,19 @@ export default function Nav() {
           <Flex alignItems={'center'}>
             <Stack direction={'row'} spacing={7}>
                 <Button onClick={toggleColorMode}>
-                  <ChakraBox
+                  <MotionBox
                     animate={{
                       rotate: [0, 0, 270, 270, 0],
                     }}
-                    // transition={{
-                    //   duration: 5,
-                    //   ease: "easeInOut",
-                    //   repeat: Infinity,
-                    //   repeatType: "loop",
-                    // }}
+                    transition={{
+                      duration: 5,
+                      ease: "easeInOut",
+                      repeat: Infinity,
+                      repeatType: "loop",
+                    }}
                   >
                     {colorMode === 'light' ? <BsMoonStarsFill /> : <BsSun />}
-                  </ChakraBox>
+                  </MotionBox>
                 </Button>                
             </Stack>
           </Flex>

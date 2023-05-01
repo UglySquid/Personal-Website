@@ -2,8 +2,7 @@ import {
     Container, SimpleGrid, Flex, Stack,
     Img, Skeleton,
     Text, Heading,
-    extendTheme, ChakraProvider, chakra,
-    shouldForwardProp,
+    extendTheme, ChakraProvider, 
   } from '@chakra-ui/react';
 
   import React, { ReactElement, useEffect, useRef, useState } from 'react';

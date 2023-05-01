@@ -8,7 +8,7 @@ import {
 } from '@chakra-ui/react'
 
 
-import { isValidMotionProp, motion } from 'framer-motion';
+import { motion } from 'framer-motion';
 import React, { useRef, useEffect } from 'react';
   
 import Hero from '@/components/hero'
@@ -24,13 +24,6 @@ const theme = extendTheme({
   }
 });
 
-const ChakraBox = chakra(motion.div, {
-  /**
-   * Allow motion props and non-Chakra props to be forwarded.
-   */
-  shouldForwardProp: (prop) => isValidMotionProp(prop) || shouldForwardProp(prop),
-});
-
 const MotionBox = motion(forwardRef(({ layoutId, ...rest }, ref) => <chakra.div ref={ref} {...rest} />))
 
 export default function RootLayout() {
@@ -43,8 +36,8 @@ export default function RootLayout() {
       </head>
       <body>
         <ChakraProvider theme={theme}>
-          <Flex className='loader' height="100%" alignItems="center" justifyContent="center">
-            <Flex direction="column" background="grey.100" p={12} rounded={6} gap={100}>
+          <Flex height="100%" alignItems="center" justifyContent="center">
+            <Flex direction="column" background="grey.100" p={13} gap={100}>
 
                 <MotionBox
                   initial={{ scaleX: 0 }}
@@ -113,8 +106,6 @@ export default function RootLayout() {
                   <Footer />
                 </MotionBox>
                 
-                
-              {/* </motion.div> */}
             </Flex>
           </Flex>
         </ChakraProvider>
