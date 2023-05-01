@@ -1,14 +1,14 @@
-import { ReactNode } from 'react';
 import {
   Box, Flex, Stack,
   Link, Button,
   useColorModeValue, useColorMode,
   forwardRef, chakra,
 } from '@chakra-ui/react';
-import { BsSun, BsMoonStarsFill } from 'react-icons/bs';
 
 import { motion } from 'framer-motion';
-import React, { } from 'react';
+import React, { ReactNode } from 'react';
+
+import { BsSun, BsMoonStarsFill } from 'react-icons/bs';
 
 const MotionBox = motion(forwardRef(({ layoutId, ...rest }, ref) => <chakra.div ref={ref} {...rest} />))
 
