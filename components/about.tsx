@@ -28,7 +28,7 @@ import {
   
   export default function About() {
     return (
-      <Box as={Container} maxW="5xl" mt={14} p={4}>
+      <Box as={Container} maxW="5xl" mt={12} p={4}>
         <Grid
           templateColumns={{
             base: 'repeat(1, 1fr)',
