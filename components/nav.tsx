@@ -1,20 +1,14 @@
 import { ReactNode } from 'react';
 import {
-  Box,
-  Flex,
-  Link,
-  Button,
-  useDisclosure,
-  useColorModeValue,
-  Stack,
-  useColorMode,
-  forwardRef
+  Box, Flex, Stack,
+  Link, Button,
+  useColorModeValue, useColorMode,
+  forwardRef, chakra,
 } from '@chakra-ui/react';
 import { BsSun, BsMoonStarsFill } from 'react-icons/bs';
 
-import { isValidMotionProp, motion, Transition } from 'framer-motion';
+import { motion } from 'framer-motion';
 import React, { } from 'react';
-import { chakra, shouldForwardProp } from '@chakra-ui/react'
 
 const MotionBox = motion(forwardRef(({ layoutId, ...rest }, ref) => <chakra.div ref={ref} {...rest} />))
 
@@ -34,7 +28,6 @@ const NavLink = ({ children }: { children: ReactNode }) => (
 
 export default function Nav() {
   const { colorMode, toggleColorMode } = useColorMode();
-  const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <>
       <Box bg={useColorModeValue('gray.100', 'gray.700')} px={4}>
