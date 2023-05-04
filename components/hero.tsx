@@ -1,8 +1,9 @@
 import {
     Container, SimpleGrid, Flex, Stack,
-    Img,
+    Img, Button,
     Text, Heading,
-    extendTheme, ChakraProvider, chakra, shouldForwardProp
+    extendTheme, ChakraProvider, chakra, shouldForwardProp,
+    Modal, useDisclosure, ModalOverlay, ModalContent, ModalHeader, ModalCloseButton, ModalBody, ModalFooter,
 } from '@chakra-ui/react';
 
 import React, { ReactElement } from 'react';
@@ -22,23 +23,6 @@ const Font = extendTheme({
   },
 })
 
-const Feature = ({ text, icon, iconBg }: FeatureProps) => {
-  return (
-    <Stack direction={'row'} align={'center'}>
-      <Flex
-        w={8}
-        h={8}
-        align={'center'}
-        justify={'center'}
-        rounded={'full'}
-        bg={iconBg}>
-        {icon}
-      </Flex>
-      <Text fontWeight={600}>{text}</Text>
-    </Stack>
-  );
-};
-
 const ChakraBox = chakra(motion.div, {
   /**
    * Allow motion props and non-Chakra props to be forwarded.
@@ -47,8 +31,12 @@ const ChakraBox = chakra(motion.div, {
 });
 
 export default function Hero() {
+  const { isOpen, onOpen, onClose } = useDisclosure({ defaultIsOpen: true })
+
   return (
     <Container maxW={'5xl'} py={12} centerContent>
+
+
       <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10} alignItems={'center'}>
         <Stack spacing={4}>
           <ChakraProvider theme={Font}>
@@ -66,6 +54,47 @@ export default function Hero() {
           I&apos;m Christine! I&apos;m currently a grade 10 student at Milliken Mills High School. 
           In my freetime, I like to read and code. I dunno man I&apos;m kinda basic 😳
           </Text>
+
+          <Button onClick={onOpen}>About Metallic Masquerade</Button>
+            <Modal isOpen={isOpen} onClose={onClose}>
+              <ModalOverlay />
+              <ModalContent>
+                <ModalHeader>Anouncement: Metallic Masquerade</ModalHeader>
+                <ModalCloseButton />
+                <ModalBody>
+                  <chakra.p>
+                    <Text as='b' fontSize='20px'>Hey Knights, guess what? The annual Sheet Metal Dance is back! </Text>
+                  <br />
+                  <br />
+                  <br />
+                  <Text as='b'>When: </Text>
+                  Friday, June 30th, 2023 (1pm-8pm)
+                  <br />
+                  <Text as='b'>Where: </Text>
+                  Don Mills Steel Factory 
+                  <br />
+                  <Text as='b'>Ticket Price: </Text>
+                  $30 for MMHS Students | $105 for Guests
+                  <br />
+                  <br />
+                  <br />
+                  <Text as='i'>
+                    Support Milliken's vibrant sheet metal industry while having a fun night of 
+                    food, drinks, and dancing. (Yes, the food and drinks will be free).
+                  </Text>
+                  <br />
+                  </chakra.p>
+                  
+                </ModalBody>
+
+                <ModalFooter>
+                  <Button colorScheme='blue' mr={3} onClick={onClose}>
+                    Close
+                  </Button>
+                  <Button variant='ghost'>I&apos;m in!</Button>
+                </ModalFooter>
+              </ModalContent>
+            </Modal>
           
         </Stack>
         <Flex justifyContent={'center'}>
