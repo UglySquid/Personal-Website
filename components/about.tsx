@@ -51,13 +51,7 @@ export default function About() {
               / About me
             </Text>
 
-            <HStack spacing={4}>
-
-              <Button leftIcon={<EmailIcon />} colorScheme='gray' variant='solid'>
-                <Link href='mailto:christine.wei.63@gmail.com' isExternal>
-                  Email
-                </Link>
-              </Button>
+            <HStack as={Flex} flexWrap="wrap" gridGap={4} justify="center">
               <Button rightIcon={<AiFillInstagram />} colorScheme='gray' variant='outline' >
                 <Link href='https://www.instagram.com/wo_ochy/' isExternal>
                   Instagram
@@ -68,19 +62,16 @@ export default function About() {
                 LinkedIn
                 </Link>
               </Button>
+              <Button leftIcon={<EmailIcon />} colorScheme='gray' variant='solid'>
+                <Link href='mailto:christine.wei.63@gmail.com' isExternal>
+                  Email
+                </Link>
+              </Button>
             </HStack>
+              
 
           </VStack>
           
-        </GridItem>
-        <GridItem>
-          <Flex>
-          <Stack>
-            <Skeleton height='20px' />
-            <Skeleton height='20px' />
-            <Skeleton height='20px' />
-          </Stack>
-          </Flex>
         </GridItem>
       </Grid>
       <Divider mt={12} mb={12} />
