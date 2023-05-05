@@ -70,7 +70,7 @@ export default function Hero() {
                   <br />
                   <br />
                   <Text as='b'>When: </Text>
-                  Friday, June 30th, 2023 (1pm-8pm)
+                  Friday, June 30th, 2023, 1pm-8pm
                   <br />
                   <Text as='b'>Where: </Text>
                   Don Mills Steel Factory 
@@ -81,8 +81,8 @@ export default function Hero() {
                   <br />
                   <br />
                   <Text as='i'>
-                    Support Milliken's vibrant sheet metal industry while having a fun night of 
-                    food, drinks, and dancing. (Yes, the food and drinks will be free).
+                    Support Milliken&apos;s vibrant sheet metal industry while having a fun night of 
+                    food, drinks, and dancing. Yes, the food and drinks will be free.
                   </Text>
                   <br />
                   </chakra.p>
