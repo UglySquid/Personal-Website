@@ -36,7 +36,7 @@ export default function RootLayout() {
       </head>
       <body>
         <ChakraProvider theme={theme}>
-          <Flex height="100%" alignItems="center" justifyContent="left">
+          <Flex height="100%" alignItems="center" justifyContent="center">
             <Flex direction="column" background="grey.100" p={13} gap={100}>
 
                 <MotionBox

@@ -51,7 +51,7 @@ export default function About() {
               / About me
             </Text>
 
-            <HStack as={Flex} flexWrap="wrap" gridGap={4} justify="center">
+            <HStack as={Flex} flexWrap="wrap" gridGap={4} justify="left">
               <Button rightIcon={<AiFillInstagram />} colorScheme='gray' variant='outline' >
                 <Link href='https://www.instagram.com/wo_ochy/' isExternal>
                   Instagram
