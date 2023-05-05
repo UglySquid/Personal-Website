@@ -2,7 +2,7 @@ import {
     Container, SimpleGrid, Flex, Stack, Box,
     Img, Button, Circle,
     Text, Heading,
-    extendTheme, ChakraProvider, chakra, shouldForwardProp,
+    extendTheme, ChakraProvider, chakra, shouldForwardProp, useColorModeValue, useColorMode, 
     Modal, useDisclosure, ModalOverlay, ModalContent, ModalHeader, ModalCloseButton, ModalBody, ModalFooter, Icon,
 } from '@chakra-ui/react';
 
@@ -40,14 +40,10 @@ const ChakraBox = chakra(motion.div, {
 
 export default function Hero() {
   const { isOpen, onOpen, onClose } = useDisclosure({ defaultIsOpen: true })
+  const { toggleColorMode } = useColorMode()
+  const box_bg = useColorModeValue('gray.500', 'gray.700')
 
   return (
-    // <Head>
-    //   <link
-    //     href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap" rel="stylesheet"
-    //   />
-    // </Head>
-
     <Container maxW={'5xl'} py={12} centerContent>
       <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10} alignItems={'center'}>
         <Stack spacing={4}>
@@ -109,7 +105,7 @@ export default function Hero() {
             </Modal>
           
         </Stack>
-        <Box boxShadow='dark-lg' p='10' rounded='lg' bg={'gray.700'} height="350px">    
+        <Box boxShadow='dark-lg' p='10' rounded='lg' bg={'gray.800'} height="350px">    
 
           <Suspense fallback={<div>Loading...</div>}>
           <Spline scene="https://prod.spline.design/e-H2UFLaP5b5SHMa/scene.splinecode" />
