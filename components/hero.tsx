@@ -110,30 +110,11 @@ export default function Hero() {
           
         </Stack>
         <Box boxShadow='dark-lg' p='10' rounded='lg' bg={'gray.700'} height="350px">    
-              {/* <Img
-                border='3px' 
-                borderColor='gray.800'
-                rounded={'md'}
-                alt={'Currently Nonexistent image'}
-                src={
-                  'deca.jpg'
-                }
-                objectFit={'cover'}
-                height={{
-                  base: '70%',
-                  md: '50%', 
-                  xs: '25%'
-                }}
-                // fallbackSrc='https://via.placeholder.com/450x300'
-                
-              /> */}
 
           <Suspense fallback={<div>Loading...</div>}>
           <Spline scene="https://prod.spline.design/e-H2UFLaP5b5SHMa/scene.splinecode" />
           </Suspense>
         </Box>
-        
-
           
       </SimpleGrid>
     </Container>
