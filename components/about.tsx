@@ -3,7 +3,7 @@ import {
     Box, Container, Flex, Grid, GridItem,
     VStack, HStack, Stack,
     Button, Divider,
-    Text, Link, 
+    Text, Link, Img,
     Skeleton, 
 } from '@chakra-ui/react';
 
@@ -40,7 +40,7 @@ export default function About() {
 
         <GridItem colSpan={1}>
 
-          <VStack alignItems="flex-start" spacing="20px">
+          <VStack alignItems="flex-start" spacing="20px" verticalAlign={'center'}>
             <Text
               bgGradient='linear(to-r, blue.200, yellow.200, pink.200)'
               bgClip='text'
@@ -72,6 +72,27 @@ export default function About() {
 
           </VStack>
           
+        </GridItem>
+        <GridItem>
+          <Box boxShadow='dark-lg' p='10' rounded='lg' bg={'gray.700'}>    
+            <Img
+              border='3px' 
+              borderColor='gray.800'
+              rounded={'md'}
+              alt={'Currently Nonexistent image'}
+              src={
+                'deca.jpg'
+              }
+              objectFit={'cover'}
+              height={{
+                base: '70%',
+                md: '50%', 
+                xs: '25%'
+              }}
+              // fallbackSrc='https://via.placeholder.com/450x300'
+              
+            />
+          </Box>
         </GridItem>
       </Grid>
       <Divider mt={12} mb={12} />

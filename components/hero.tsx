@@ -6,13 +6,11 @@ import {
     Modal, useDisclosure, ModalOverlay, ModalContent, ModalHeader, ModalCloseButton, ModalBody, ModalFooter, Icon,
 } from '@chakra-ui/react';
 
-import React, { ReactElement } from 'react';
+import React, { ReactElement, Suspense } from 'react';
 import { isValidMotionProp, motion } from 'framer-motion';
 
-import { TbTriangleInvertedFilled } from 'react-icons/tb'
-
-import "@fontsource/roboto-mono/500.css"
-
+const Spline = React.lazy(() => import('@splinetool/react-spline'));
+    
 interface FeatureProps {
   text: string;
   iconBg: string;
@@ -44,9 +42,13 @@ export default function Hero() {
   const { isOpen, onOpen, onClose } = useDisclosure({ defaultIsOpen: true })
 
   return (
+    // <Head>
+    //   <link
+    //     href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap" rel="stylesheet"
+    //   />
+    // </Head>
+
     <Container maxW={'5xl'} py={12} centerContent>
-
-
       <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10} alignItems={'center'}>
         <Stack spacing={4}>
           <ChakraProvider theme={Font}>
@@ -107,9 +109,8 @@ export default function Hero() {
             </Modal>
           
         </Stack>
-        <Box boxShadow='dark-lg' p='10' rounded='lg' bg={'gray.700'}>    
-          <Flex justifyContent={'center'}>
-              <Img
+        <Box boxShadow='dark-lg' p='10' rounded='lg' bg={'gray.700'} height="350px">    
+              {/* <Img
                 border='3px' 
                 borderColor='gray.800'
                 rounded={'md'}
@@ -124,12 +125,12 @@ export default function Hero() {
                   xs: '25%'
                 }}
                 // fallbackSrc='https://via.placeholder.com/450x300'
-              />
-            {/* <canvas class="webgl">
-              <script type='module' src='/cat.js'></script>
-              </canvas> */}
-            {/* 3D Model credit: "ordak the duck" (https://skfb.ly/oEn8s) by ZIRODESIGN is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/). */}
-          </Flex>
+                
+              /> */}
+
+          <Suspense fallback={<div>Loading...</div>}>
+          <Spline scene="https://prod.spline.design/e-H2UFLaP5b5SHMa/scene.splinecode" />
+          </Suspense>
         </Box>
         
 
