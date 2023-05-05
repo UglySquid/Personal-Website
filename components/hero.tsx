@@ -19,6 +19,14 @@ interface FeatureProps {
   icon?: ReactElement;
 }
 
+const breakpoints = {
+  sm: '30em', // 480px
+  md: '48em', // 768px
+  lg: '62em', // 992px
+  xl: '80em', // 1280px
+'2xl': '96em', // 1536px
+}
+
 const Font = extendTheme({
   fonts: {
     Heading: `'Roboto Mono', monospace;`,
@@ -100,8 +108,7 @@ export default function Hero() {
           
         </Stack>
         <Box boxShadow='dark-lg' p='10' rounded='lg' bg={'gray.700'}>    
-          <Flex justifyContent={'space-between'}>
-            <Circle size='30px' bg='gray.800' color='white'></Circle>
+          <Flex justifyContent={'center'}>
               <Img
                 border='3px' 
                 borderColor='gray.800'
@@ -111,7 +118,11 @@ export default function Hero() {
                   'deca.jpg'
                 }
                 objectFit={'cover'}
-                height={250}
+                height={{
+                  base: '70%',
+                  md: '50%', 
+                  xs: '25%'
+                }}
                 // fallbackSrc='https://via.placeholder.com/450x300'
               />
             {/* <canvas class="webgl">
