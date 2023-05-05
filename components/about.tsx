@@ -2,7 +2,7 @@ import {
     chakra,
     Box, Container, Flex, Grid, GridItem,
     VStack, HStack, Stack,
-    Button, Divider,
+    Button, Divider, Show,
     Text, Link, Img,
     Skeleton, 
 } from '@chakra-ui/react';
@@ -40,7 +40,7 @@ export default function About() {
 
         <GridItem colSpan={1}>
 
-          <VStack alignItems="flex-start" spacing="20px" verticalAlign={'center'}>
+          <Flex direction={'column'} alignItems="flex-start" justifyContent="center">
             <Text
               bgGradient='linear(to-r, blue.200, yellow.200, pink.200)'
               bgClip='text'
@@ -51,33 +51,39 @@ export default function About() {
               / About me
             </Text>
 
-            <HStack as={Flex} flexWrap="wrap" gridGap={4} justify="center">
-              <Button rightIcon={<AiFillInstagram />} colorScheme='gray' variant='outline' >
+            <HStack as={Flex} flexWrap="wrap" gridGap={4}>
+              <Button leftIcon={<AiFillInstagram />} colorScheme='gray' variant='outline' >
                 <Link href='https://www.instagram.com/wo_ochy/' isExternal>
-                  Instagram
+                  <Show above='sm'>
+                    Instagram
+                  </Show>
                 </Link>
               </Button>
-              <Button rightIcon={<AiFillLinkedin />} colorScheme='gray' variant='outline' >
+              <Button leftIcon={<AiFillLinkedin />} colorScheme='gray' variant='outline' >
                 <Link href='https://www.linkedin.com/in/christine-wei-is-awesome/' isExternal>
-                LinkedIn
+                <Show above='sm'>
+                    LinkedIn
+                  </Show>
                 </Link>
               </Button>
               <Button leftIcon={<EmailIcon />} colorScheme='gray' variant='solid'>
                 <Link href='mailto:christine.wei.63@gmail.com' isExternal>
-                  Email
+                  <Show above='sm'>
+                    Email
+                  </Show>
                 </Link>
               </Button>
             </HStack>
               
 
-          </VStack>
+          </Flex>
           
         </GridItem>
         <GridItem>
           <Box boxShadow='dark-lg' p='10' rounded='lg' bg={'gray.700'}>    
             <Img
               border='3px' 
-              borderColor='gray.800'
+              boxShadow='dark-lg'
               rounded={'md'}
               alt={'Currently Nonexistent image'}
               src={

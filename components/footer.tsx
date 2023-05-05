@@ -43,7 +43,8 @@ import {
   
   export default function Footer() {
     return (
-      <Box
+      <Box 
+        boxShadow='dark-lg'
         bg={useColorModeValue('gray.100', 'gray.700')}
         color={useColorModeValue('gray.700', 'gray.200')}>
         <Container

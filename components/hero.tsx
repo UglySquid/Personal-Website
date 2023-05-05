@@ -64,7 +64,7 @@ export default function Hero() {
           </ChakraProvider>
           <Text color={'white.500'} fontSize={'lg'}>
           I&apos;m Christine! I&apos;m currently a grade 10 student at Milliken Mills High School. 
-          In my freetime, I like to read and code. I dunno man I&apos;m kinda basic 😳
+          In my freetime, I like to read and code. I dunno man I&apos;m kinda basic 😳. I beg you not to look at this website in light mode.
           </Text>
 
           <Button onClick={onOpen}>About Metallic Masquerade</Button>
