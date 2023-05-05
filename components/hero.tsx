@@ -1,13 +1,15 @@
 import {
-    Container, SimpleGrid, Flex, Stack,
-    Img, Button,
+    Container, SimpleGrid, Flex, Stack, Box,
+    Img, Button, Circle,
     Text, Heading,
     extendTheme, ChakraProvider, chakra, shouldForwardProp,
-    Modal, useDisclosure, ModalOverlay, ModalContent, ModalHeader, ModalCloseButton, ModalBody, ModalFooter,
+    Modal, useDisclosure, ModalOverlay, ModalContent, ModalHeader, ModalCloseButton, ModalBody, ModalFooter, Icon,
 } from '@chakra-ui/react';
 
 import React, { ReactElement } from 'react';
 import { isValidMotionProp, motion } from 'framer-motion';
+
+import { TbTriangleInvertedFilled } from 'react-icons/tb'
 
 import "@fontsource/roboto-mono/500.css"
 
@@ -97,30 +99,30 @@ export default function Hero() {
             </Modal>
           
         </Stack>
-        <Flex justifyContent={'center'}>
-          <ChakraBox  
-            whileHover={{ scale: 1.1}}
-            onHoverStart={e => {}}
-            onHoverEnd={e => {}}
-          >
-            <Img
-              rounded={'md'}
-              alt={'Currently Nonexistent image'}
-              src={
-                'deca.jpg'
-              }
-              objectFit={'cover'}
-              height={250}
-              filter='auto' brightness='70%'
-              // fallbackSrc='https://via.placeholder.com/450x300'
-            />
-          </ChakraBox>
+        <Box boxShadow='dark-lg' p='10' rounded='lg' bg={'gray.700'}>    
+          <Flex justifyContent={'space-between'}>
+            <Circle size='30px' bg='gray.800' color='white'></Circle>
+              <Img
+                border='3px' 
+                borderColor='gray.800'
+                rounded={'md'}
+                alt={'Currently Nonexistent image'}
+                src={
+                  'deca.jpg'
+                }
+                objectFit={'cover'}
+                height={250}
+                // fallbackSrc='https://via.placeholder.com/450x300'
+              />
+            {/* <canvas class="webgl">
+              <script type='module' src='/cat.js'></script>
+              </canvas> */}
+            {/* 3D Model credit: "ordak the duck" (https://skfb.ly/oEn8s) by ZIRODESIGN is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/). */}
+          </Flex>
+        </Box>
+        
 
-          {/* <canvas class="webgl">
-            <script type='module' src='/cat.js'></script>
-          </canvas> */}
-          {/* 3D Model credit: "ordak the duck" (https://skfb.ly/oEn8s) by ZIRODESIGN is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/). */}
-        </Flex>
+          
       </SimpleGrid>
     </Container>
   );
