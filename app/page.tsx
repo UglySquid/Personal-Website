@@ -63,7 +63,7 @@ export default function RootLayout() {
                   transition={{ type: "spring", stiffness: 100, duration: 2 }}
                   viewport={{ once: true }}
                 >
-                  <Skeleton startColor='yellow.600' endColor='blue.200' height='10px' />
+                  <Skeleton startColor='yellow.600' endColor='gray.700' height='10px' />
                 </MotionBox>
                 
                 <MotionBox shouldWrapChildren
@@ -83,7 +83,23 @@ export default function RootLayout() {
                   transition={{ type: "spring", stiffness: 100, duration: 2 }}
                   viewport={{ once: true }}
                 >
-                  <Skeleton startColor='yellow.600' endColor='blue.200' height='10px' />
+                  <Skeleton startColor='yellow.600' endColor='pink.200' height='10px' />
+                </MotionBox>
+                <MotionBox
+                  initial={{ scaleX: 0 }}
+                  whileInView={{ scaleX: 1  }}
+                  transition={{ type: "spring", stiffness: 100, duration: 2 }}
+                  viewport={{ once: true }}
+                >
+                  <Skeleton startColor='gray.700' endColor='gray.700' height='10px' />
+                </MotionBox>
+                <MotionBox
+                  initial={{ scaleX: 0 }}
+                  whileInView={{ scaleX: 1  }}
+                  transition={{ type: "spring", stiffness: 100, duration: 2 }}
+                  viewport={{ once: true }}
+                >
+                  <Skeleton startColor='yellow.600' endColor='yellow.600' height='10px' />
                 </MotionBox>
 
                 
