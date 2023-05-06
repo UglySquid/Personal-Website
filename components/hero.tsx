@@ -1,6 +1,6 @@
 import {
     Container, SimpleGrid, Flex, Stack, Box,
-    Img, Button, Circle,
+    Img, Button, Circle, Show,
     Text, Heading,
     extendTheme, ChakraProvider, chakra, shouldForwardProp, useColorModeValue, useColorMode, 
     Modal, useDisclosure, ModalOverlay, ModalContent, ModalHeader, ModalCloseButton, ModalBody, ModalFooter, Icon,
@@ -45,6 +45,15 @@ export default function Hero() {
   return (
     <Container maxW={'5xl'} py={12} centerContent>
       <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10} alignItems={'center'}>
+
+        <Show below='sm'>
+          <Box p='10' rounded='lg' bg={useColorModeValue('gray.100', 'gray.800')} height="500px">    
+            <Suspense fallback={<div>Loading...</div>}>
+            <Spline scene="https://prod.spline.design/kvl1zb3sgfZKPr9Q/scene.splinecode" />
+            </Suspense>
+          </Box>
+        </Show>
+
         <Stack spacing={4}>
           <ChakraProvider theme={Font}>
             <Heading
@@ -105,12 +114,15 @@ export default function Hero() {
             </Modal>
           
         </Stack>
-        <Box p='10' rounded='lg' bg={useColorModeValue('gray.100', 'gray.700')} height="500px">    
 
-          <Suspense fallback={<div>Loading...</div>}>
-          <Spline scene="https://prod.spline.design/e-H2UFLaP5b5SHMa/scene.splinecode" />
-          </Suspense>
-        </Box>
+        <Show above='sm'>
+          <Box p='10' rounded='lg' bg={useColorModeValue('gray.100', 'gray.800')} height="500px">    
+            <Suspense fallback={<div>Loading...</div>}>
+            <Spline scene="https://prod.spline.design/e-H2UFLaP5b5SHMa/scene.splinecode" />
+            </Suspense>
+          </Box>
+        </Show>
+        
           
       </SimpleGrid>
     </Container>
