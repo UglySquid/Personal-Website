@@ -79,7 +79,7 @@ export default function About() {
           </Flex>
           
         </GridItem>
-        <GridItem>
+        {/* <GridItem>
           <Box boxShadow='dark-lg' p='10' rounded='lg' bg={'gray.700'}>    
             <Img
               border='3px' 
@@ -99,7 +99,7 @@ export default function About() {
               
             />
           </Box>
-        </GridItem>
+        </GridItem> */}
       </Grid>
       <Divider mt={12} mb={12} />
       <Grid
