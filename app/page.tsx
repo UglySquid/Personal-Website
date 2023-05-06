@@ -32,7 +32,7 @@ export default function RootLayout() {
     <html lang="en">
       <head>
         <title>Christine Wei :D</title>
-        <link rel="icon" type="image/x-icon" href="imsobbingnow.png"/>
+        <link rel="icon" type="image/x-icon" href="molang-favicon.png"/>
       </head>
       <body>
         <ChakraProvider theme={theme}>
