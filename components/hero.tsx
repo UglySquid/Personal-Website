@@ -105,7 +105,7 @@ export default function Hero() {
             </Modal>
           
         </Stack>
-        <Box p='10' rounded='lg' bg={'gray.800'} height="400px">    
+        <Box p='10' rounded='lg' bg={'gray.800'} height="500px">    
 
           <Suspense fallback={<div>Loading...</div>}>
           <Spline scene="https://prod.spline.design/e-H2UFLaP5b5SHMa/scene.splinecode" />
