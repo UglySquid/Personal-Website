@@ -43,11 +43,11 @@ export default function Hero() {
   const { colorMode, toggleColorMode } = useColorMode();
 
   return (
-    <Container maxW={'5xl'} py={12} centerContent>
+    <Container maxW={'5xl'} py={{base: 12, sm: 4}} centerContent>
       <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10} alignItems={'center'}>
 
         <Show below='sm'>
-          <Box p='10' rounded='lg' bg={useColorModeValue('gray.100', 'gray.800')} height="200px">    
+          <Box p='10' rounded='lg' bg={useColorModeValue('gray.100', 'gray.800')} height="400px">    
             <Suspense fallback={<div>Loading...</div>}>
             <Spline scene="https://prod.spline.design/kvl1zb3sgfZKPr9Q/scene.splinecode" />
             </Suspense>
