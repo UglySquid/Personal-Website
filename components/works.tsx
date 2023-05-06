@@ -60,7 +60,6 @@ const Card = ({ heading, description, icon, link }: CardProps) => {
         borderWidth="1px"
         borderRadius="lg"
         overflow="hidden"
-        boxShadow='dark-lg'
         bg={useColorModeValue('gray.100', 'gray.800')}
         p={5}>
         <Stack align={'start'} spacing={5}>
