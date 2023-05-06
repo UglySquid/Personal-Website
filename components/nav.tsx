@@ -30,7 +30,7 @@ export default function Nav() {
   const { colorMode, toggleColorMode } = useColorMode();
   return (
     <>
-      <Box bg={useColorModeValue('gray.100', 'gray.700')} px={4} rounded='lg'>
+      <Box bg={useColorModeValue('gray.100', 'gray.700')} px={4} rounded='lg' pt={12}>
         <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
           <Box>Welcome to Christine&apos;s Development Portfolio!</Box>
 
