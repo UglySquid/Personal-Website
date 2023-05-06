@@ -40,8 +40,7 @@ const ChakraBox = chakra(motion.div, {
 
 export default function Hero() {
   const { isOpen, onOpen, onClose } = useDisclosure({ defaultIsOpen: true })
-  const { toggleColorMode } = useColorMode()
-  const box_bg = useColorModeValue('gray.500', 'gray.700')
+  const { colorMode, toggleColorMode } = useColorMode();
 
   return (
     <Container maxW={'5xl'} py={12} centerContent>
@@ -58,7 +57,7 @@ export default function Hero() {
               
             </Heading>
           </ChakraProvider>
-          <Text color={'white.500'} fontSize={'lg'}>
+          <Text color={useColorModeValue('gray.800', 'white.500')} fontSize={'lg'}>
           I&apos;m Christine! I&apos;m currently a grade 10 student at Milliken Mills High School. 
           In my freetime, I like to read and code. I dunno man I&apos;m kinda basic 😳. 
           I beg you not to look at this website in light mode and preferably not on your phone for best 3D experience.
@@ -106,7 +105,7 @@ export default function Hero() {
             </Modal>
           
         </Stack>
-        <Box p='10' rounded='lg' bg={'gray.800'} height="500px">    
+        <Box p='10' rounded='lg' bg={useColorModeValue('gray.100', 'gray.700')} height="500px">    
 
           <Suspense fallback={<div>Loading...</div>}>
           <Spline scene="https://prod.spline.design/e-H2UFLaP5b5SHMa/scene.splinecode" />

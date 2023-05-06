@@ -2,9 +2,9 @@ import {
     chakra,
     Box, Container, Flex, Grid, GridItem,
     VStack, HStack, Stack,
-    Button, Divider, Show,
-    Text, Link, Img,
-    Skeleton, 
+    Button, Divider, Show, IconButton,
+    Text, Link, Img, 
+    Skeleton, useColorMode, useColorModeValue,
 } from '@chakra-ui/react';
 
 import { AiFillInstagram, AiFillLinkedin } from 'react-icons/ai'
@@ -18,7 +18,7 @@ interface FeatureProps {
 const Feature = ({ heading, text }: FeatureProps) => {
   return (
     <GridItem>
-      <chakra.h3 fontSize="2xl" fontWeight="600" color={'yellow.100'}>
+      <chakra.h3 fontSize="2xl" fontWeight="600" color={useColorModeValue('pink.200', 'yellow.100')}>
         {heading}
       </chakra.h3>
       <chakra.p>{text}</chakra.p>
@@ -27,6 +27,7 @@ const Feature = ({ heading, text }: FeatureProps) => {
 };
 
 export default function About() {
+  const { colorMode, toggleColorMode } = useColorMode();
   return (
     
     <Box as={Container} maxW="5xl" mt={12} p={4}>
@@ -51,30 +52,37 @@ export default function About() {
               / About me
             </Text>
 
-            <HStack as={Flex} flexWrap="wrap" gridGap={4}>
-              <Button leftIcon={<AiFillInstagram />} colorScheme='gray' variant='outline' >
-                <Link href='https://www.instagram.com/wo_ochy/' isExternal>
-                  <Show above='sm'>
-                    Instagram
-                  </Show>
-                </Link>
-              </Button>
-              <Button leftIcon={<AiFillLinkedin />} colorScheme='gray' variant='outline' >
-                <Link href='https://www.linkedin.com/in/christine-wei-is-awesome/' isExternal>
-                <Show above='sm'>
-                    LinkedIn
-                  </Show>
-                </Link>
-              </Button>
-              <Button leftIcon={<EmailIcon />} colorScheme='gray' variant='solid'>
-                <Link href='mailto:christine.wei.63@gmail.com' isExternal>
-                  <Show above='sm'>
-                    Email
-                  </Show>
-                </Link>
-              </Button>
-            </HStack>
-              
+            <Show below='sm'> 
+              <Divider mt={6} mb={6} /> 
+            </Show>
+
+            <Show above='sm'>
+              <HStack as={Flex} flexWrap="wrap" gridGap={6}>
+                <Button leftIcon={<AiFillInstagram />} colorScheme='gray' variant='outline' >
+                  <Link href='https://www.instagram.com/wo_ochy/' isExternal>
+                      Instagram
+                  </Link>
+                </Button>
+                <Button leftIcon={<AiFillLinkedin />} colorScheme='gray' variant='outline' >
+                  <Link href='https://www.linkedin.com/in/christine-wei-is-awesome/' isExternal>
+                      LinkedIn
+                  </Link>
+                </Button>
+                <Button leftIcon={<EmailIcon />} colorScheme='gray' variant='solid'>
+                  <Link href='mailto:christine.wei.63@gmail.com' isExternal>
+                      Email
+                  </Link>
+                </Button>
+              </HStack>
+            </Show>
+
+            <Show below='sm'>
+              <HStack as={Flex} flexWrap="wrap" gridGap={6}>
+                <IconButton as='a' href='https://www.instagram.com/wo_ochy/' colorScheme='gray' variant='outline' aria-label='Instagram' icon={<AiFillInstagram />} />
+                <IconButton as='a' href='https://www.linkedin.com/in/christine-wei-is-awesome/' colorScheme='gray' variant='outline' aria-label='LinkedIn' icon={<AiFillInstagram />} />
+                <IconButton as='a' href='mailto:christine.wei.63@gmail.com' colorScheme='gray' variant='solid' aria-label='Email' icon={<EmailIcon />} />
+              </HStack>
+            </Show>
 
           </Flex>
           

@@ -70,16 +70,16 @@ const Card = ({ heading, description, icon, link }: CardProps) => {
             justify={'center'}
             color={'white'}
             rounded={'full'}
-            bg={useColorModeValue('gray.100', 'gray.700')}>
+            bg={useColorModeValue('pink.100', 'gray.700')}>
             {icon}
           </Flex>
           <Box mt={2}>
-            <Heading color={'yellow.100'} size="md">{heading}</Heading>
+            <Heading color={useColorModeValue('gray.700', 'yellow.100')} size="md">{heading}</Heading>
             <Text mt={1} fontSize={'sm'}>
               {description}
             </Text>
           </Box>
-          <Button variant={'link'} colorScheme={'blue'} size={'sm'}>
+          <Button variant={'link'} color={useColorModeValue('gray.600', 'pink.200')} size={'sm'}>
               {link}
           </Button>
         </Stack>
