@@ -30,7 +30,10 @@ export default function About() {
   const { colorMode, toggleColorMode } = useColorMode();
   return (
     
-    <Box as={Container} maxW="5xl" mt={6} p={4}>
+    <Box as={Container} maxW="5xl" p={4}>
+      <Show below='sm'>
+        <Divider mb={12} />
+      </Show>
       <Grid
         templateColumns={{
           base: 'repeat(1, 1fr)',
