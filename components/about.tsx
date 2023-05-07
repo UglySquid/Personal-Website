@@ -1,6 +1,6 @@
 import {
     chakra,
-    Box, Container, Flex, Grid, GridItem,
+    Box, Container, Flex, Grid, GridItem, Center,
     VStack, HStack, Stack,
     Button, Divider, Show, IconButton,
     Text, Link, Img, 
@@ -30,7 +30,7 @@ export default function About() {
   const { colorMode, toggleColorMode } = useColorMode();
   return (
     
-    <Box as={Container} maxW="5xl" mt={12} p={4}>
+    <Box as={Container} maxW="5xl" mt={6} p={4}>
       <Grid
         templateColumns={{
           base: 'repeat(1, 1fr)',
@@ -42,19 +42,37 @@ export default function About() {
         <GridItem colSpan={1}>
 
           <Flex direction={'column'} alignItems="flex-start" justifyContent="center">
-            <Text
+            <Show below='sm'>
+              <HStack>
+                <VStack as={Flex} flexWrap="wrap" gridGap={2} mt={0} mr={12} alignItems={'center'}>
+                  <IconButton as='a' href='https://www.instagram.com/wo_ochy/' colorScheme='gray' variant='outline' aria-label='Instagram' icon={<AiFillInstagram />} />
+                  <IconButton as='a' href='https://www.linkedin.com/in/christine-wei-is-awesome/' colorScheme='gray' variant='outline' aria-label='LinkedIn' icon={<AiFillLinkedin />} />
+                  <IconButton as='a' href='mailto:christine.wei.63@gmail.com' colorScheme='gray' variant='solid' aria-label='Email' icon={<EmailIcon />} />
+                </VStack>
+                <Text 
+                  bgGradient='linear(to-r, blue.200, yellow.200, pink.200)'
+                  bgClip='text'
+                  fontSize='5xl'
+                  fontWeight='extrabold'
+                  alignSelf={'right'}
+                  >
+                    / About me
+                </Text>
+              </HStack>
+            </Show>
+
+            <Show above='sm'>
+              <Text 
               bgGradient='linear(to-r, blue.200, yellow.200, pink.200)'
               bgClip='text'
               fontSize='5xl'
               fontWeight='extrabold'
               alignSelf={'right'}
-            >
-              / About me
-            </Text>
-
-            <Show below='sm'> 
-              <Divider mt={6} mb={6} /> 
+              >
+                / About me
+              </Text>
             </Show>
+           
 
             <Show above='sm'>
               <HStack as={Flex} flexWrap="wrap" gridGap={6}>
@@ -75,14 +93,7 @@ export default function About() {
                 </Button>
               </HStack>
             </Show>
-
-            <Show below='sm'>
-              <HStack as={Flex} flexWrap="wrap" gridGap={6}>
-                <IconButton as='a' href='https://www.instagram.com/wo_ochy/' colorScheme='gray' variant='outline' aria-label='Instagram' icon={<AiFillInstagram />} />
-                <IconButton as='a' href='https://www.linkedin.com/in/christine-wei-is-awesome/' colorScheme='gray' variant='outline' aria-label='LinkedIn' icon={<AiFillInstagram />} />
-                <IconButton as='a' href='mailto:christine.wei.63@gmail.com' colorScheme='gray' variant='solid' aria-label='Email' icon={<EmailIcon />} />
-              </HStack>
-            </Show>
+            
 
           </Flex>
           
