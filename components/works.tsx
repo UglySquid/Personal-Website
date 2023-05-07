@@ -89,7 +89,7 @@ const Card = ({ heading, description, icon, link }: CardProps) => {
 
 export default function Works() {
   return (
-    <Box p={4}>
+    <Box p={4} mt={{base: 100, sm: 0}} mb={{base: 100, sm: 0}}>
       <Stack spacing={3} as={Container} maxW={'3xl'} textAlign={'center'}>
         <Text
           bgGradient='linear(to-r, blue.200, yellow.200, pink.200)'

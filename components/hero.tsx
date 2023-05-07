@@ -54,7 +54,7 @@ export default function Hero() {
           </Box>
         </Show>
 
-        <Stack spacing={4}>
+        <Stack spacing={4} mb={{base: 100, sm: 0}}>
           <ChakraProvider theme={Font}>
             <Heading
               bgGradient='linear(to-r, blue.200, yellow.200, pink.200)'
