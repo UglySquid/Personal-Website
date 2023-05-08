@@ -79,7 +79,7 @@ const Card = ({ heading, description, icon, link }: CardProps) => {
               {description}
             </Text>
           </Box>
-          <Button variant={'link'} color={useColorModeValue('gray.600', 'pink.200')} size={'sm'}>
+          <Button variant={'link'} color={useColorModeValue('gray.600', 'pink.100')} size={'sm'}>
               {link}
           </Button>
         </Stack>
