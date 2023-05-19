@@ -55,7 +55,7 @@ import {
           spacing={4}
           justify={{ base: 'center', md: 'space-between' }}
           align={{ base: 'center', md: 'center' }}>
-          <Text>© 2023 Christine Wei. All rights reserved</Text>
+          <Text>Made with 💙 from Christine Wei</Text>
           <Stack direction={'row'} spacing={6}>
             <SocialButton label={'Linkedin'} href={'https://www.linkedin.com/in/christine-wei-is-awesome/'}>
               <FaLinkedin />

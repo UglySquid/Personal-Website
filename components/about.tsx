@@ -5,6 +5,7 @@ import {
     Button, Divider, Show, IconButton,
     Text, Link, Img, 
     Skeleton, useColorMode, useColorModeValue,
+    createIcon,
 } from '@chakra-ui/react';
 
 import { AiFillInstagram, AiFillLinkedin } from 'react-icons/ai'
@@ -119,6 +120,9 @@ export default function About() {
             />
           </Box>
         </GridItem> */}
+        <GridItem>
+
+        </GridItem>
       </Grid>
       <Divider mt={12} mb={12} />
       <Grid
