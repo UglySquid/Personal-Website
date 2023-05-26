@@ -39,7 +39,7 @@ const ChakraBox = chakra(motion.div, {
 });
 
 export default function Hero() {
-  const { isOpen, onOpen, onClose } = useDisclosure({ defaultIsOpen: true })
+  const { isOpen, onOpen, onClose } = useDisclosure({ defaultIsOpen: false })
   const { colorMode, toggleColorMode } = useColorMode();
 
   return (
@@ -73,7 +73,7 @@ export default function Hero() {
           </Text>
 
           <Button onClick={onOpen}>About Metallic Masquerade</Button>
-            <Modal onClose={onClose}>
+            <Modal isOpen={isOpen} onClose={onClose}>
               <ModalOverlay />
               <ModalContent>
                 <ModalHeader>Anouncement: Metallic Masquerade</ModalHeader>
