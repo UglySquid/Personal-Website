@@ -73,7 +73,7 @@ export default function Hero() {
           </Text>
 
           <Button onClick={onOpen}>About Metallic Masquerade</Button>
-            <Modal isOpen={isOpen} onClose={onClose}>
+            <Modal onClose={onClose}>
               <ModalOverlay />
               <ModalContent>
                 <ModalHeader>Anouncement: Metallic Masquerade</ModalHeader>
