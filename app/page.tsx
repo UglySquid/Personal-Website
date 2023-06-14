@@ -4,7 +4,8 @@ import {
   Flex,
   ChakraProvider, chakra, shouldForwardProp, forwardRef,
   Skeleton,
-  extendTheme, localStorageManager
+  extendTheme,
+  DarkMode
 } from '@chakra-ui/react'
 
 
@@ -24,8 +25,6 @@ const theme = extendTheme({
   }
 });
 
-<ChakraProvider theme={theme} colorModeManager={localStorageManager}></ChakraProvider>
-
 const MotionBox = motion(forwardRef(({ layoutId, ...rest }, ref) => <chakra.div ref={ref} {...rest} />))
 
 export default function RootLayout() {
@@ -37,7 +36,7 @@ export default function RootLayout() {
         <link rel="icon" type="image/x-icon" href="astrobunny.jpg"/>
       </head>
       <body>
-        <ChakraProvider theme={theme}>
+        <ChakraProvider theme={DarkMode}>
           <Flex height="100%" alignItems="center" justifyContent="center">
             <Flex direction="column" background="grey.100" p={{base: 13, sm: 4}} gap={{base: 0, sm: 100}}>
 
