@@ -32,7 +32,7 @@ export default function Nav() {
     <>
       <Box bg={useColorModeValue('gray.100', 'gray.700')} px={4} rounded='lg' mt={12}>
         <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
-          <Box>Welcome to Christine&apos;s Development Portfolio!</Box>
+          <Box>Welcome to Christine&apos;s Portfolio!</Box>
 
           <Flex alignItems={'center'}>
             <Stack direction={'row'} spacing={7}>
