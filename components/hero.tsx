@@ -48,7 +48,7 @@ export default function Hero() {
 
         <Show below='sm'>
           <Box p='10' rounded='lg' bg={useColorModeValue('gray.100', 'gray.800')} height="300px">
-            <Suspense fallback={<div>Loading...Loading...Still Loading</div>}>
+            <Suspense fallback={<div>Loading...</div>}>
               <Spline scene="https://prod.spline.design/kvl1zb3sgfZKPr9Q/scene.splinecode" />
             </Suspense>
           </Box>
@@ -68,13 +68,13 @@ export default function Hero() {
           </ChakraProvider>
           <Text color={useColorModeValue('gray.800', 'white.500')} fontSize={'lg'}>
             I&apos;m Christine, a 10th grade student at Milliken Mills High School.
-            I'm super into robotics and autonomous machines, especially for space exploration.
+            I&apos;m super into robotics and autonomous machines, especially for space exploration.
             <br></br>
             <br></br>
-            Right now, I'm diving into Python databases like SQL, and my future goal is to use Python for AI.
+            Right now, I&apos;m diving into Python databases like SQL, and my future goal is to use Python for AI.
             <br></br>
             <br></br>
-            I can't wait to make a meaningful impact in the field and contribute to the advancement of space exploration with my passion for robotics and AI.
+            I can&apos;t wait to make a meaningful impact in the field and contribute to the advancement of space exploration with my passion for robotics and AI.
           </Text>
 
           {/* <Button onClick={onOpen}>About Metallic Masquerade</ >
