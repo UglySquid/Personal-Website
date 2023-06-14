@@ -71,10 +71,10 @@ export default function Hero() {
             I&apos;m super into robotics and autonomous machines, especially for space exploration.
             <br></br>
             <br></br>
-            Right now, I&apos;m diving into Python databases like SQL, and my future goal is to use Python for AI.
+            Right now, I&apos;m diving into Python databases like SQL, and I&apos;m eager to explore Python's AI capabilities.
             <br></br>
             <br></br>
-            I can&apos;t wait to make a meaningful impact in the field and contribute to the advancement of space exploration with my passion for robotics and AI.
+            I can&apos;t wait to make a meaningful impact in the field and contribute to the advancement of space exploration!
           </Text>
 
         </Stack>

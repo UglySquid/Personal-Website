@@ -28,7 +28,6 @@ const theme = extendTheme({
 const MotionBox = motion(forwardRef(({ layoutId, ...rest }, ref) => <chakra.div ref={ref} {...rest} />))
 
 export default function RootLayout() {
-  const { colorMode } = useColorMode();
   return (
     
     <html lang="en">
