@@ -49,7 +49,7 @@ export default function Hero() {
         <Show below='sm'>
           <Box p='10' rounded='lg' bg={useColorModeValue('gray.100', 'gray.800')} height="300px">    
             <Suspense fallback={<div>Loading...</div>}>
-            <Spline scene="https://prod.spline.design/kvl1zb3sgfZKPr9Q/scene.splinecode" />
+              <Spline scene="https://prod.spline.design/kvl1zb3sgfZKPr9Q/scene.splinecode" />
             </Suspense>
           </Box>
         </Show>
@@ -68,11 +68,11 @@ export default function Hero() {
           </ChakraProvider>
           <Text color={useColorModeValue('gray.800', 'white.500')} fontSize={'lg'}>
           I&apos;m Christine! I&apos;m currently a grade 10 student at Milliken Mills High School. 
-          In my freetime, I like to read and code. I dunno man I&apos;m kinda basic 😳. 
-          I beg you not to look at this website in light mode and preferably not on your phone for best 3D experience.
+          Robotics and autonomous machines for space exploration is an area I would like to explore in the future, 
+          Some other things I&apos;m interested in are computer science, mathematics, astrophysics, quantum mechanics, and aerospace engineering. 
           </Text>
 
-          <Button onClick={onOpen}>About Metallic Masquerade</Button>
+          {/* <Button onClick={onOpen}>About Metallic Masquerade</Button>
             <Modal isOpen={isOpen} onClose={onClose}>
               <ModalOverlay />
               <ModalContent>
@@ -111,7 +111,7 @@ export default function Hero() {
                   <Button variant='ghost'>I&apos;m in!</Button>
                 </ModalFooter>
               </ModalContent>
-            </Modal>
+            </Modal> */}
           
         </Stack>
 

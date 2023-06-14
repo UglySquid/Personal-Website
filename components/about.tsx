@@ -136,7 +136,7 @@ export default function About() {
         <Skeleton isLoaded>
           <Feature
             heading={'Spirit of Math'}
-            text ={'As Teaching Assistant at Spirit of Math, I teach advanced maths to students ages 7 and 8. This experience taught me communication and patience.'}
+            text ={'As Teaching Assistant at Spirit of Math, I teach advanced maths to students grades 7 and 8. This experience taught me communication and patience.'}
           />
         </Skeleton>
         
