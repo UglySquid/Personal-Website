@@ -4,7 +4,7 @@ import {
   Flex,
   ChakraProvider, chakra, shouldForwardProp, forwardRef,
   Skeleton,
-  extendTheme, useColorMode,
+  extendTheme, localStorageManager
 } from '@chakra-ui/react'
 
 
@@ -19,16 +19,16 @@ import Footer from '@/components/footer'
 
 const theme = extendTheme({
   config: {
+    initialColorMode: "dark",
     useSystemColorMode: false,
-    initialColorMode: "dark"
   }
 });
+
+<ChakraProvider theme={theme} colorModeManager={localStorageManager}></ChakraProvider>
 
 const MotionBox = motion(forwardRef(({ layoutId, ...rest }, ref) => <chakra.div ref={ref} {...rest} />))
 
 export default function RootLayout() {
-  const { colorMode, toggleColorMode } = useColorMode()
-
   return (
     
     <html lang="en">
