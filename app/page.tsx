@@ -4,7 +4,7 @@ import {
   Flex,
   ChakraProvider, chakra, shouldForwardProp, forwardRef,
   Skeleton,
-  extendTheme,
+  extendTheme, useColorMode,
 } from '@chakra-ui/react'
 
 
@@ -27,6 +27,8 @@ const theme = extendTheme({
 const MotionBox = motion(forwardRef(({ layoutId, ...rest }, ref) => <chakra.div ref={ref} {...rest} />))
 
 export default function RootLayout() {
+  const { colorMode, toggleColorMode } = useColorMode()
+
   return (
     
     <html lang="en">
