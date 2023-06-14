@@ -31,8 +31,8 @@ export default function RootLayout() {
     
     <html lang="en">
       <head>
-        <title>Christine Wei :D</title>
-        <link rel="icon" type="image/x-icon" href="imsobbingnow.png"/>
+        <title>Christine Wei :&#93;</title>
+        <link rel="icon" type="image/x-icon" href="astrobunny.jpg"/>
       </head>
       <body>
         <ChakraProvider theme={theme}>

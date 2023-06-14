@@ -136,28 +136,28 @@ export default function About() {
         <Skeleton isLoaded>
           <Feature
             heading={'Spirit of Math'}
-            text ={'As Teaching Assistant at Spirit of Math, I teach advanced maths to students grades 7 and 8. This experience taught me communication and patience.'}
+            text ={'As Teaching Assistant at Spirit of Math, I teach advanced maths to students grades 7 and 8.'}
           />
         </Skeleton>
         
         <Skeleton isLoaded>
           <Feature
             heading={'MMHS Robotics'}
-            text={'As secretary, I create spreadsheets, manage meetings, and take care of many emails and anouncements. I am also involved in the decision-making process'}
+            text={'As secretary, I create spreadsheets, manage meetings, and take care of many emails and anouncements.'}
           />
         </Skeleton>
         
         <Skeleton isLoaded>
           <Feature
             heading={'PERIOD. Ontario'}
-            text={'As the Animator of PERIOD. Ontario, I animate educational videos that are used in workshops across school boards in Toronto to teach about menstruation.'}
+            text={'As the Animator of PERIOD. Ontario, I animate educational videos that are used in workshops across school boards in Toronto.'}
           />            
         </Skeleton>
 
         <Skeleton isLoaded>
           <Feature
             heading={"Ignition Hacks"}
-            text={'I work with other UI/UX executives at Ignition Hacks to design the sponsorship package and various other things. This experience taught me teamwork.'}
+            text={'I work with other UI/UX executives at Ignition Hacks to design the sponsorship package and various other things.'}
           />            
         </Skeleton>
 
