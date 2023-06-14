@@ -36,7 +36,7 @@ export default function RootLayout() {
         <link rel="icon" type="image/x-icon" href="astrobunny.jpg"/>
       </head>
       <body>
-        <ChakraProvider theme={DarkMode}>
+        <ChakraProvider theme={theme}>
           <Flex height="100%" alignItems="center" justifyContent="center">
             <Flex direction="column" background="grey.100" p={{base: 13, sm: 4}} gap={{base: 0, sm: 100}}>
 
