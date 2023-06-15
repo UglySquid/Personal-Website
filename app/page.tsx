@@ -5,7 +5,7 @@ import {
   ChakraProvider, chakra, shouldForwardProp, forwardRef,
   Skeleton,
   extendTheme,
-  useColorMode
+  useColorMode,
 } from '@chakra-ui/react'
 
 
