@@ -68,13 +68,13 @@ export default function Hero() {
           </ChakraProvider>
           <Text color={useColorModeValue('gray.800', 'white.500')} fontSize={'lg'}>
             I&apos;m Christine, a 10th grade student at Milliken Mills High School.
-            I&apos;m super into robotics and autonomous machines, especially for space exploration.
+            I&apos;m curious about the potential for range species to be used during space exploration and habitation. 
             <br></br>
             <br></br>
-            Right now, I&apos;m diving into Python databases like SQL, and I&apos;m eager to explore Python&apos;s AI capabilities.
+            Right now, I&apos;m diving into Python SQL for biological datasets and analysation, and I'm eager to explore Python's AI capabilities for simulations.
             <br></br>
             <br></br>
-            I can&apos;t wait to make a meaningful impact in the field and contribute to the advancement of space exploration!
+            I can&apos;t wait to make a meaningful impact in the field and contribute to the advancement of space exploration and sustainability on earth!
           </Text>
 
         </Stack>
