@@ -71,7 +71,7 @@ export default function Hero() {
             I&apos;m curious about the potential for range species to be used during space exploration and habitation. 
             <br></br>
             <br></br>
-            Right now, I&apos;m diving into Python SQL for biological datasets and analysation, and I'm eager to explore Python's AI capabilities for simulations.
+            Right now, I&apos;m diving into Python SQL for biological datasets and analysation, and I&apos;m eager to explore Python&apos;s AI capabilities for simulations.
             <br></br>
             <br></br>
             I can&apos;t wait to make a meaningful impact in the field and contribute to the advancement of space exploration and sustainability on earth!
