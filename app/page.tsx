@@ -29,12 +29,12 @@ const MotionBox = motion(forwardRef(({ layoutId, ...rest }, ref) => <chakra.div 
 export default function RootLayout() {
   return (
     
-    // <html lang="en">
-    //   <head>
-    //     <title>Christine Wei :&#93;</title>
-    //     <link rel="icon" type="image/x-icon" href="astrobunny.jpg"/>
-    //   </head>
-    //   <body>
+    <html lang="en">
+      <head>
+        <title>Christine Wei :&#93;</title>
+        <link rel="icon" type="image/x-icon" href="astrobunny.jpg"/>
+      </head>
+      <body>
         <ChakraProvider theme={theme}>
           <Flex height="100%" alignItems="center" justifyContent="center">
             <Flex direction="column" background="grey.100" p={{base: 13, sm: 4}} gap={{base: 0, sm: 100}}>
@@ -108,7 +108,7 @@ export default function RootLayout() {
             </Flex>
           </Flex>
         </ChakraProvider>
-    //   </body>
-    // </html>
+      </body>
+    </html>
   )
 }
