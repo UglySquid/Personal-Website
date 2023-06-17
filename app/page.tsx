@@ -121,6 +121,7 @@ import {
   extendTheme,
 } from '@chakra-ui/react';
 
+import { motion } from 'framer-motion';
 import Hero from '@/components/hero';
 import Works from '@/components/works';
 import About from '@/components/about';
@@ -134,6 +135,8 @@ const theme = extendTheme({
   },
 });
 
+const MotionFlex = motion(Flex);
+
 export default function RootLayout() {
   return (
     <html lang="en">
@@ -144,7 +147,16 @@ export default function RootLayout() {
       <body>
         <ChakraProvider theme={theme}>
           <Flex height="100%" alignItems="center" justifyContent="center">
-            <Flex direction="column" background="grey.100" p={{base: 13, sm: 4}} gap={{base: 0, sm: 100}}>
+            <MotionFlex
+              as="section"
+              direction="column"
+              background="grey.100"
+              p={{base: 13, sm: 4}}
+              gap={{base: 0, sm: 100}}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 1 }}
+            >
 
               <Nav />
 
@@ -160,11 +172,12 @@ export default function RootLayout() {
 
               <Footer />
 
-            </Flex>
+            </MotionFlex>
           </Flex>
         </ChakraProvider>
       </body>
     </html>
   );
 }
+
 
