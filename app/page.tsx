@@ -4,7 +4,7 @@ import {
   Flex,
   ChakraProvider, chakra, shouldForwardProp, forwardRef,
   Skeleton,
-  extendTheme,
+  extendTheme, ColorModeScript,
 } from '@chakra-ui/react'
 
 
@@ -35,7 +35,8 @@ export default function RootLayout() {
         <link rel="icon" type="image/x-icon" href="astrobunny.jpg"/>
       </head>
       <body>
-        <ChakraProvider theme={theme}>
+        <ChakraProvider theme={theme} >
+          <ColorModeScript initialColorMode={theme.config.initialColorMode}/>
           <Flex height="100%" alignItems="center" justifyContent="center">
             <Flex direction="column" background="grey.100" p={{base: 13, sm: 4}} gap={{base: 0, sm: 100}}>
 
