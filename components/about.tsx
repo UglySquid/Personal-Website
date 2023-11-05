@@ -8,8 +8,9 @@ import {
     createIcon,
 } from '@chakra-ui/react';
 
-import { AiFillInstagram, AiFillLinkedin } from 'react-icons/ai'
-import { EmailIcon } from '@chakra-ui/icons'
+import { AiFillInstagram, AiFillLinkedin } from 'react-icons/ai';
+import { BsDiscord } from 'react-icons/bs';
+import { EmailIcon } from '@chakra-ui/icons';
 
 interface FeatureProps {
   heading: string;
@@ -45,11 +46,11 @@ export default function About() {
           <Flex direction={'column'} alignItems="flex-start" justifyContent="center">
             <Show below='sm'>
               <HStack>
-                <VStack as={Flex} flexWrap="wrap" gridGap={2} mt={0} mr={12} alignItems={'center'}>
-                  <IconButton as='a' href='https://www.instagram.com/wo_ochy/' colorScheme='gray' variant='outline' aria-label='Instagram' icon={<AiFillInstagram />} />
+                {/* <VStack as={Flex} flexWrap="wrap" gridGap={2} mt={0} mr={12} alignItems={'center'}>
+                  <IconButton as='a' href='https://www.instagram.com/cryies.w/' colorScheme='gray' variant='outline' aria-label='Instagram' icon={<AiFillInstagram />} />
                   <IconButton as='a' href='https://www.linkedin.com/in/christine-wei-is-awesome/' colorScheme='gray' variant='outline' aria-label='LinkedIn' icon={<AiFillLinkedin />} />
-                  <IconButton as='a' href='mailto:christine.wei.63@gmail.com' colorScheme='gray' variant='solid' aria-label='Email' icon={<EmailIcon />} />
-                </VStack>
+                  <IconButton as='a' href='https://discord.ca/users/429040760759779330' colorScheme='gray' variant='solid' aria-label='Discord' icon={<BsDiscord />} />
+                </VStack> */}
                 <Text 
                   bgGradient='linear(to-r, blue.200, yellow.200, pink.200)'
                   bgClip='text'
@@ -76,23 +77,23 @@ export default function About() {
            
 
             <Show above='sm'>
-              <HStack as={Flex} flexWrap="wrap" gridGap={6}>
-                <Button leftIcon={<AiFillInstagram />} colorScheme='gray' variant='outline' >
-                  <Link href='https://www.instagram.com/wo_ochy/' isExternal>
+              {/* <HStack as={Flex} flexWrap="wrap" gridGap={6}>
+                <Button leftIcon={<AiFillInstagram />} colorScheme='gray' variant='solid' >
+                  <Link href='https://www.instagram.com/cryies.w/' isExternal>
                       Instagram
                   </Link>
                 </Button>
-                <Button leftIcon={<AiFillLinkedin />} colorScheme='gray' variant='outline' >
+                <Button leftIcon={<AiFillLinkedin />} colorScheme='gray' variant='solid' >
                   <Link href='https://www.linkedin.com/in/christine-wei-is-awesome/' isExternal>
                       LinkedIn
                   </Link>
                 </Button>
-                <Button leftIcon={<EmailIcon />} colorScheme='gray' variant='solid'>
-                  <Link href='mailto:christine.wei.63@gmail.com' isExternal>
-                      Email
+                <Button leftIcon={<BsDiscord />} colorScheme='gray' variant='solid'>
+                  <Link href='https://discord.ca/users/429040760759779330' isExternal>
+                      Discord
                   </Link>
                 </Button>
-              </HStack>
+              </HStack> */}
             </Show>
             
 
@@ -136,28 +137,28 @@ export default function About() {
         <Skeleton isLoaded>
           <Feature
             heading={'Spirit of Math'}
-            text ={'As Teaching Assistant at Spirit of Math, I teach advanced maths to students grades 7 and 8.'}
+            text ={'As a Teaching Assistant at Spirit of Math, I help teach middle school students in mathematics, focusing on grades 7 and 8.'}
           />
         </Skeleton>
         
         <Skeleton isLoaded>
           <Feature
             heading={'MMHS Robotics'}
-            text={'As secretary, I create spreadsheets, manage meetings, and take care of many emails and anouncements.'}
+            text={'As co-president, I oversee meetings, and collaborate within a team to design and construct an FRC robot for the 2024 FRC season.'}
           />
         </Skeleton>
         
         <Skeleton isLoaded>
           <Feature
             heading={'PERIOD. Ontario'}
-            text={'As the Animator of PERIOD. Ontario, I animate educational videos that are used in workshops across school boards in Toronto.'}
+            text={'As an animator at PERIOD. Ontario, I create educational animations featured in workshops across GTA school boards.'}
           />            
         </Skeleton>
 
         <Skeleton isLoaded>
           <Feature
             heading={"Ignition Hacks"}
-            text={'I work with other UI/UX executives at Ignition Hacks to design the sponsorship package and various other things.'}
+            text={'In my UI/UX role, I collaborate with other UI/UX executives to social media posts, event material, and stickers.'}
           />            
         </Skeleton>
 

@@ -67,14 +67,11 @@ export default function Hero() {
             </Heading>
           </ChakraProvider>
           <Text color={useColorModeValue('gray.800', 'white.500')} fontSize={'lg'}>
-            I&apos;m Christine, a 10th grade student at Milliken Mills High School.
-            I&apos;m curious about the potential for range species to be used during space exploration and habitation. 
+            I&apos;m Christine, an 11th grade IB student at Milliken Mills High School.
+            I&apos;m interested in robotics and aerospace. 
             <br></br>
             <br></br>
-            Right now, I&apos;m diving into Python SQL for biological datasets and analysation, and I&apos;m eager to explore Python&apos;s AI capabilities for simulations.
-            <br></br>
-            <br></br>
-            I can&apos;t wait to make a meaningful impact in the field and contribute to the advancement of space exploration and sustainability on earth!
+            Right now, I&apos;m further exploring Python for ML, and back end developement.
           </Text>
 
         </Stack>
@@ -86,7 +83,6 @@ export default function Hero() {
             </Suspense>
           </Box>
         </Show>
-
 
       </SimpleGrid>
     </Container>

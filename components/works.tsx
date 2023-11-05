@@ -128,7 +128,7 @@ export default function Works() {
               heading={'Other Dev'}
               icon={<Icon as={BsGithub} w={10} h={10} />}
               description={
-                'Github with my projects. '
+                'Github with my projects. <3'
               }
               link={<Link href={'https://github.com/UglySquid'} isExternal>Check it out</Link>}
             />

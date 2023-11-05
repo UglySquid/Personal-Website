@@ -8,6 +8,8 @@ import {
     VisuallyHidden,
   } from '@chakra-ui/react';
   import { FaInstagram, FaLinkedin, FaGithub } from 'react-icons/fa';
+  import { BsDiscord } from 'react-icons/bs';
+  import { EmailIcon } from '@chakra-ui/icons';
   import { ReactNode } from 'react';
   
   const SocialButton = ({
@@ -55,7 +57,7 @@ import {
           spacing={4}
           justify={{ base: 'center', md: 'space-between' }}
           align={{ base: 'center', md: 'center' }}>
-          <Text>Made with 💙 from Christine Wei</Text>
+          <Text>Made with ♡ from Christine Wei</Text>
           <Stack direction={'row'} spacing={6}>
             <SocialButton label={'Linkedin'} href={'https://www.linkedin.com/in/christine-wei-is-awesome/'}>
               <FaLinkedin />
@@ -63,8 +65,14 @@ import {
             <SocialButton label={'Github'} href={'https://github.com/UglySquid'}>
               <FaGithub />
             </SocialButton>
-            <SocialButton label={'Instagram'} href={'https://www.instagram.com/wo_ochy/'}>
+            <SocialButton label={'Instagram'} href={'https://www.instagram.com/cryies.w/'}>
               <FaInstagram />
+            </SocialButton>
+            <SocialButton label={'Discord'} href={'https://discord.ca/users/429040760759779330'}>
+              <BsDiscord />
+            </SocialButton>
+            <SocialButton label={'Email'} href={'mailto:christine.wei.63@gmail.com'}>
+              <EmailIcon />
             </SocialButton>
           </Stack>
         </Container>

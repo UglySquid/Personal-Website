@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@chakra-ui/icons": "^2.0.19",
-    "@chakra-ui/react": "^2.5.5",
+    "@chakra-ui/react": "^2.8.1",
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
     "@fontsource/open-sans": "^4.5.14",
@@ -28,7 +28,7 @@
     "next-reveal": "^1.0.6",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-icons": "^4.8.0",
+    "react-icons": "^4.11.0",
     "typescript": "5.0.4"
   }
 }
